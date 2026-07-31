@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Serve .html for extensionless URLs (e.g. /products/tm6s-techmanrobot)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# Redirect .html URLs to extensionless (SEO-friendly)
+RewriteCond %{THE_REQUEST} \s/products/([^/\s]+)\.html[\s?] [NC]
+RewriteRule ^([^/]+)\.html$ /products/$1 [R=301,L]
