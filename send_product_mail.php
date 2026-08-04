@@ -4,6 +4,23 @@ use PHPMailer\PHPMailer\Exception;
 
 header('Content-Type: application/json');
 
+// Allow Live Server (and other local origins) to post during development
+$origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
+if ($origin !== '' && (
+    preg_match('#^https?://(127\.0\.0\.1|localhost)(:\d+)?$#', $origin) ||
+    preg_match('#^https?://risagrobotics\.local(:\d+)?$#', $origin)
+)) {
+    header('Access-Control-Allow-Origin: ' . $origin);
+    header('Access-Control-Allow-Methods: POST, OPTIONS');
+    header('Access-Control-Allow-Headers: Content-Type, X-Requested-With');
+    header('Vary: Origin');
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204);
+    exit;
+}
+
 // Load PHPMailer via Composer
 require 'vendor/autoload.php';
 
@@ -25,10 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $userIP = $_SERVER['REMOTE_ADDR'];
     $verifyURL = "https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}&remoteip={$userIP}";
     
-    $response = file_get_contents($verifyURL);
+    $response = @file_get_contents($verifyURL);
     $responseKeys = json_decode($response, true);
 
-    if (!$responseKeys["success"]) {
+    if (!is_array($responseKeys) || empty($responseKeys['success'])) {
         echo json_encode([
             'status' => 'error',
             'message' => 'reCAPTCHA validation failed. Please confirm you are not a robot.'
@@ -81,14 +98,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'muhzinzalam@gmail.com'; 
-            $mail->Password   = 'opbyjwbiifacwyqz'; 
+            $mail->Username   = 'sales@yesmachinery.ae'; 
+            $mail->Password   = 'objvkupdqixgjovn'; 
             $mail->SMTPSecure = 'tls';
             $mail->Port       = 587;
 
-            // Recipients
-            $mail->setFrom($email, $name );
-            $mail->addAddress('muhzinzalam@gmail.com'); 
+            // Recipients — Gmail requires From to match the authenticated account
+            $mail->setFrom('info@risag.ae', $name ?: 'Risag Website');
+            $mail->addReplyTo($email, $name);
+            $mail->addAddress('info@risag.ae');
 
             $mail->isHTML(true);
             $mail->Subject = 'New product Enquiry From Risag';

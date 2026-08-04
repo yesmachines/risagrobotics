@@ -18,10 +18,16 @@
 	}
 
 	function getProductMailUrl() {
+		// Live Server (e.g. :5500) cannot run PHP — use Laragon vhost instead
+		if (window.location.port === '5500' || window.location.port === '5501') {
+			return 'http://risagrobotics.local/send_product_mail.php';
+		}
+
 		var el = document.querySelector('script[src*="product-form-validate.js"]');
 		if (el && el.src) {
 			try {
-				return new URL('../send_product_mail.php', el.src).href;
+				// Script lives in /assets/js/ — go up two levels to site root
+				return new URL('../../send_product_mail.php', el.src).href;
 			} catch (e) {
 				/* fall through */
 			}
@@ -156,13 +162,19 @@
 							});
 						}
 					},
-					error: function () {
+					error: function (xhr) {
 						Swal.close();
 						form_btn.prop('disabled', false);
+						var msg = 'Something went wrong. Please try again later.';
+						if (xhr && xhr.responseJSON && xhr.responseJSON.message) {
+							msg = xhr.responseJSON.message;
+						} else if (window.location.port === '5500' || window.location.port === '5501') {
+							msg = 'Mail could not be sent. Open this page via http://risagrobotics.local/ (Laragon) so PHP can run, then try again.';
+						}
 						Swal.fire({
 							icon: 'error',
 							title: 'Oops...',
-							text: 'Something went wrong. Please try again later.'
+							text: msg
 						});
 					}
 				});
