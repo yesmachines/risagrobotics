@@ -13,9 +13,11 @@ RewriteRule ^([^/]+)\.html$ /$1 [R=301,L]
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s/index(.html)?\sHTTP/
 RewriteRule ^index(.html)?$ / [R=301,L]
 
-# php -- BEGIN cPanel-generated handler, do not edit
-# Set the “ea-php82” package as the default “PHP” programming language.
-<IfModule mime_module>
+# Local Laragon / Apache mod_php
+<IfModule php_module>
+  AddHandler application/x-httpd-php .php
+</IfModule>
+# cPanel EasyApache / LiteSpeed (production) — ignored when module is absent
+<IfModule lite_speed>
   AddHandler application/x-httpd-ea-php82___lsphp .php .php8 .phtml
 </IfModule>
-# php -- END cPanel-generated handler, do not edit
