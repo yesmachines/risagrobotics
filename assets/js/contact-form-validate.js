@@ -68,6 +68,8 @@
 			return;
 		}
 
+		var productIsSelect = $form.find('[name="product"]').is('select');
+
 		$form.validate({
 			ignore: [],
 			rules: {
@@ -84,7 +86,7 @@
 					phoneNumber: true
 				},
 				product: {
-					required: true
+					required: productIsSelect
 				}
 			},
 			messages: {

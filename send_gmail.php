@@ -59,8 +59,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email   = isset($_POST['email']) ? trim($_POST['email']) : '';
         $phone   = isset($_POST['phone']) ? trim($_POST['phone']) : '';
         $product = isset($_POST['product']) ? trim($_POST['product']) : '';
+        $company = isset($_POST['company']) ? trim($_POST['company']) : '';
         $message = isset($_POST['message']) ? trim($_POST['message']) : '';
-        $subject = 'Product Enquiry From Risag';
+        $subject = ($product === 'Training & Service')
+            ? 'Service Enquiry From Risag'
+            : 'Product Enquiry From Risag';
 
         if ($name === '' || !preg_match('/^[A-Za-z]+(?:\s+[A-Za-z]+)*$/', $name)) {
             echo json_encode([
@@ -115,7 +118,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // $mail->addAddress('info@girafcreatives.com');
 
             $mail->isHTML(true);
-            $mail->Subject = 'New Message From Risag';
+            $mail->Subject = $subject;
             // $mail->Body = '
             //     <div style="max-width:600px;margin:0 auto;border:1px solid #ddd;padding:20px;font-family:sans-serif;background:#f9f9f9;">
             //         <h2 style="color:#333;border-bottom:1px solid #ddd;padding-bottom:10px;">📩 ' .  htmlspecialchars($subject) . '</h2>
@@ -146,14 +149,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // ';
 
             $template = file_get_contents('email-template.php');
-            $message = isset($_POST['message']) ? trim($_POST['message']) : 'Product Enquiry';
-            $product = isset($_POST['product']) ? trim($_POST['product']) : '';
+            if ($message === '') {
+                $message = ($product === 'Training & Service') ? 'Service Enquiry' : 'Product Enquiry';
+            }
             $productRow = '';
             if (!empty($product)) {
-                $productRow = 
+                $label = ($product === 'Training & Service') ? 'Enquiry Type :' : 'Product Intrested :';
+                $productRow =
                 '<tr>
-                    <td  style="text-align: left; padding-left: 30px;padding-bottom: 9px; font-size: 14px;"><strong>Product Intrested :</strong></td>
+                    <td  style="text-align: left; padding-left: 30px;padding-bottom: 9px; font-size: 14px;"><strong>' . $label . '</strong></td>
                     <td>' . htmlspecialchars($product) . '</td>
+                </tr>';
+            }
+            if (!empty($company)) {
+                $productRow .=
+                '<tr>
+                    <td  style="text-align: left; padding-left: 30px;padding-bottom: 9px; font-size: 14px;"><strong>Company :</strong></td>
+                    <td>' . htmlspecialchars($company) . '</td>
                 </tr>';
             }
             $replacements = [
@@ -161,7 +173,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 '{{email}}' => htmlspecialchars($email),
                 '{{phone}}' => htmlspecialchars($phone),
                 '{{productRow}}' => $productRow,
-                '{{message}}' => htmlspecialchars($message),
+                '{{message}}' => nl2br(htmlspecialchars($message)),
                 '{{subject}}' => htmlspecialchars($subject),
             ];
 

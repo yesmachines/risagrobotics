@@ -6937,6 +6937,7 @@ p {
   color: #42526D;
   outline: none;
   box-shadow: none;
+  width: 100%;
 }
 
 .service__details__left .write__review__wrap form .cmn--btn {
@@ -6944,6 +6945,28 @@ p {
   border: none;
   outline: none;
   margin-left: 10px;
+}
+
+.service__details__left .write__review__wrap form > .row > [class*="col-"] > .form-control {
+  padding: unset;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  height: auto;
+}
+
+.service__details__left .write__review__wrap form label.error,
+.service__details__left .write__review__wrap form label.contact-form-error {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 6px;
+  display: block;
+  font-weight: 500;
+}
+
+.service__details__left .write__review__wrap form .form-control.error input,
+.service__details__left .write__review__wrap form .form-control.error textarea {
+  border-color: #e74c3c;
 }
 
 @media (max-width: 991px) {
