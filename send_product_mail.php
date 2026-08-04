@@ -98,15 +98,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host       = 'smtp.gmail.com';
             $mail->SMTPAuth   = true;
-            $mail->Username   = 'saneshbigleap@gmail.com'; 
-            $mail->Password   = 'bzxvsgeinuwisdkt'; 
+            $mail->Username   = 'sales@yesmachinery.ae'; 
+            $mail->Password   = 'objvkupdqixgjovn'; 
             $mail->SMTPSecure = 'tls';
             $mail->Port       = 587;
 
             // Recipients — Gmail requires From to match the authenticated account
-            $mail->setFrom('saneshbigleap@gmail.com', $name ?: 'Risag Website');
+            $mail->setFrom('info@risag.ae', $name ?: 'Risag Website');
             $mail->addReplyTo($email, $name);
-            $mail->addAddress('saneshbigleap@gmail.com');
+            $mail->addAddress('info@risag.ae');
 
             $mail->isHTML(true);
             $mail->Subject = 'New product Enquiry From Risag';
