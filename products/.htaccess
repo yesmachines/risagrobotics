@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Custom 404 page for invalid / missing product URLs
+ErrorDocument 404 /404.html
+
 # Serve .html for extensionless URLs (e.g. /products/tm6s-techmanrobot)
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^/]+)$ $1.html [L]

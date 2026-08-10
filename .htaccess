@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Custom 404 page for invalid / missing URLs
+ErrorDocument 404 /404.html
+
 # Remove .html from URL
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^([^/]+)$ $1.html [L]
