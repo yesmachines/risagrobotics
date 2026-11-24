@@ -1851,6 +1851,129 @@ p {
   padding: 10px 10px;
 }
 
+.blog-table--comparison {
+  width: 100%;
+  margin: 24px 0 32px;
+  border: 1px solid #dce5e1;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  table-layout: fixed;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.blog-table--comparison th,
+.blog-table--comparison td {
+  padding: 15px 16px;
+  border: 0;
+  border-right: 1px solid #e3eae7;
+  border-bottom: 1px solid #e3eae7;
+  text-align: left;
+  vertical-align: top;
+}
+
+.blog-table--comparison thead th {
+  background: #193b36;
+  color: #fff;
+  font-weight: 700;
+}
+
+.blog-table--comparison thead th:nth-child(2) {
+  background: #26765d;
+}
+
+.blog-table--comparison thead th:last-child,
+.blog-table--comparison tbody tr > *:last-child {
+  border-right: 0;
+}
+
+.blog-table--comparison tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+.blog-table--comparison tbody th[scope="row"] {
+  width: 22%;
+  background: #f2f6f4;
+  color: #193b36;
+  font-weight: 700;
+}
+
+.blog-table--comparison tbody td {
+  background: #fff;
+  color: #394640;
+}
+
+.blog-table--comparison tbody tr:nth-child(even) td {
+  background: #f8faf9;
+}
+
+.blog-table--comparison tbody tr:hover td {
+  background: #edf5f1;
+}
+
+.blog-table--comparison tbody tr:hover th[scope="row"] {
+  background: #e7f0eb;
+}
+
+@media (max-width: 767px) {
+  .blog-table--comparison,
+  .blog-table--comparison tbody {
+    display: block;
+    width: 100%;
+  }
+
+  .blog-table--comparison thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .blog-table--comparison tbody tr {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-bottom: 14px;
+    overflow: hidden;
+    border: 1px solid #dce5e1;
+    border-radius: 8px;
+  }
+
+  .blog-table--comparison tbody tr:last-child {
+    margin-bottom: 0;
+  }
+
+  .blog-table--comparison tbody th[scope="row"] {
+    grid-column: 1 / -1;
+    width: auto;
+    padding: 12px 14px;
+    border-right: 0;
+    font-size: 15px;
+  }
+
+  .blog-table--comparison tbody td {
+    padding: 12px 14px;
+    border-bottom: 0;
+    font-size: 14px;
+  }
+
+  .blog-table--comparison tbody td::before {
+    display: block;
+    margin-bottom: 7px;
+    color: #26765d;
+    content: attr(data-label);
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+}
+
 .common__item {
   background: #162557;
 }
