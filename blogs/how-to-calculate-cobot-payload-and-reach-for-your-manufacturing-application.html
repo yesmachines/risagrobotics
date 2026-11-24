@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Learn how to calculate cobot payload and reach for your manufacturing application. Understand load capacity, gripper weight and workspace requirements before choosing a cobot." />
+  <title> Cobot Payload and Reach: How to Choose the Right Robot </title>
+  <!--Favicon img-->
+  <link rel="canonical"
+    href="https://risagrobotics.com/blogs/how-to-calculate-cobot-payload-and-reach-for-your-manufacturing-application" />
+
+  <link rel="shortcut icon" href="../assets/img/logo/favicon.png" />
+  <!--main css-->
+  <!-- <link rel="stylesheet" href="/assets/css/main.css"> -->
+  <!-- <link rel="stylesheet" href="../assets/css/main.css"> -->
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <!-- Google font -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-490B9273C3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-490B9273C3");
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-5WZXTT4T");
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WZXTT4T" height="0" width="0"
+    style="display: none; visibility: hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+ <!-- Global Header -->
+  <div id="header-blog-placeholder"></div>
+ <!-- Global Header -->
+
+<!-- Banner Here -->
+<section class="banner__section breadcumnd__banner inner-bnr">
+  <!--Mask-->
+  <div class="banner__bgmask">
+    <img src="../assets/img/elements/box-element.png" alt="mask" />
+  </div>
+  <!--Mask-->
+  <!--Container-->
+  <div class="container">
+    <div class="breadcumnd__wrapper">
+      <div class="row g-4 justify-content-between align-items-end">
+        <!--col-->
+        <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12">
+          <div class="breadcumnd__content">
+            <h1 class="title">Blog Details</h1>
+            <ul class="breadcumnd__list">
+              <li>
+                <a href="../index"> Home </a>
+              </li>
+              <li>
+                <span class="icon">
+                  <i class="material-symbols-outlined"> chevron_right </i>
+                </span>
+              </li>
+              <li class="sucess">Blog Details</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Container-->
+</section>
+<!-- Banner End -->
+
+  <!-- Blog Details Here -->
+  <section class="service__section bg__white pt-120 pb-80">
+    <!--container-->
+    <div class="container">
+      <div class="row">
+        <div class="col-xxl-8 col-xl-8 col-lg-8">
+          <div class="service__details__left blog__details__left">
+            <div class="machine__learning__box mb-5">
+              <div class="details__thumb">
+                <img src="../assets/img/blogs/how-to-calculate-cobot-payload-and-reach-for-your-manufacturing-application.webp"
+                  alt="blog image" />
+              </div>
+              <div class="content">
+                <h1 class="headtext">
+              How to Calculate Cobot Payload and Reach for Your Manufacturing Application
+                </h1>
+                <ul class="admin__wrap">
+                  <li>
+                    <span class="icon">
+                      <i class="material-symbols-outlined">
+                        event_available
+                      </i>
+                    </span>
+                    <span> 24-11-2026 </span>
+                  </li>
+                </ul> 
+ 
+<p class="pb__20">If you think choosing a cobot is all about finding one with the longest reach or the capacity to lift heavy objects,
+   you have to think better. Because the right cobot isn’t necessarily the strongest one; rather, 
+   it’s the one that can handle your specific manufacturing requirements. This is where payload and reach become relevant. 
+
+</p>
+<p class="pb__20">You may be planning to automate machine tending, assembly, or material handling; in any case, these two factors have to be considered so that you choose a cobot that works for you.</p>
+<p class="pb__20">Wait, so how do you calculate the payload and reach that matches your task? Let’s find out.</p>
+<h4>What Is a Cobot Payload and What Does It Include?</h4>
+<p class="pb__20">A cobot payload is the maximum load a cobot can carry while performing a task.
+   However, the payload isn’t just the weight of the object the <a href="https://risagrobotics.com/" style="color: #000000;font-style: italic;font-weight: 600;text-decoration: underline;"> cobots</a> carry; it includes everything attached to the cobot’s wrist,
+    such as the gripper, workpiece, additional tooling or sensors, and the tool changers. And the good news is it doesn’t end here.
+     Centre of gravity, wrist movements, and loading conditions are also crucial to decide whether the cobot is safe to handle. 
+
+</p>
+
+<h4 class="pb__20">How to Calculate the Required Cobot Payload</h4>
+<p class="pb__20">The math is quite straightforward. You identify the heaviest component the <a href="https://risagrobotics.com/" style="color: #000000;font-style: italic;font-weight: 600;text-decoration: underline;"> cobot</a> will handle and then add the weight of the tooling,
+   gripper and other accessories to it. The sum total you get is the actual payload capacity.
+
+</p>
+<p> <b>Take a look at this example: </b> </p>
+
+<p class="pb__20">Let’s say your facility needs a cobot to pick up metal components:</p>
+<!-- table -->
+ <table>
+  
+ </table>
+<!-- table -->
+
+<p class="pb__20">The calculation goes like this: <b> Required payload = Workpiece + Gripper + Tooling </b> </p>
+<p class="pb__20">In the above example, the cobot needs to carry a total load of 6 kg. But that doesn’t mean that any cobots with a 6kg payload will suffice.
+   You have to take physics into account as well. Yes, the centre of gravity. If the gripper or the product extends too far from the robot’s wrist,
+    it creates additional force on the joints. Apart from this, the robot should also handle the force created while accelerating, stopping and changing direction.
+
+</p>
+<p class="pb__20">Therefore, make sure to check the manufacturer's rated payload, centre of gravity, inertia and other specifications.  </p>
+<h4>How to Calculate Cobot Reach for Your Application</h4>
+<p class="pb__20">Cobot reach refers to how far the robot arm can extend from the mounting position. The reachable workspace is the overall area the robot can access through its permitted movement.</p>
+<p class="pb__20">To calculate the reach, you have to look into these factors: </p>
+
+<ul>
+  <li>  Where the cobot is installed. </li>
+  <li>  Where it needs to pick up products. </li>
+  <li>  Where it needs to place them. </li>
+  <li>  Whether it needs to reach around equipment or reach the workstation from a particular angle. </li>
+</ul>
+
+<p class="pb__20">You have to measure the distance between the robot’s mounting position and the working locations. Then check whether the cobot can reach these positions with the required tools.</p>
+<p class="pb__20">Additionally, you should also consider the gripper’s length and the approach angle. 
+  The cobot might be able to reach a particular point, but the gripper should also be positioned properly to pick up and place the object.
+
+</p>
+<h4>Why Payload and Reach Must Be Calculated Together</h4>
+<p class="pb__20">Take a cobot handling a heavy metal component with a long gripper, for instance. Even if the combined weight falls
+   with the rated payload, the extended load may exceed the permitted wrist movement. This is why checking both the payload and the arm reach is important.
+    Because the cobot should be able to handle the load throughout the movement and not just at a specific position.
+
+</p>
+<h4>Other Factors to Consider While Choosing a Cobot</h4>
+<p class="pb__20">While payload and reach are important, you can’t choose a cobot based on these alone. Consider the factors given below as well:</p>
+
+<ul>
+  <li> Repeatability: Can the cobot return to the same position consistently?  </li>
+  <li> Cycle time: Can it complete the required movements quickly to meet the production goals. </li>
+  <li> Tool compatibility: Does it support the gripper, sensors, and other tools needed for the application? </li>
+  <li> Workspace: Is there enough space for the robot, machinery, operators and the surrounding equipment? </li>
+  <li> Safety: Has the whole cobot system as a whole been tested for potential risk? </li>
+  <li> Integration: Can the cobot communicate with the existing equipment? </li>
+</ul>
+<h4>How to Choose the Right Cobot for Your Manufacturing Application </h4>
+
+<p class="pb__20">Before selecting a <a href="https://risagrobotics.com/" style="color: #000000;font-style: italic;font-weight: 600;text-decoration: underline;"> collaborative robot</a>, you have to have a clear idea about the production requirements. It is better if you keep a checklist: </p>
+
+<ul>
+  <li>  Identify the task that you want to automate, such as machine tending, material handling, or assembly.   </li>
+  <li>  Calculate the maximum workpiece weight.   </li>
+  <li>  Make sure to include the gripper, sensors, tooling and other accessories while calculating the payload.  </li>
+  <li>  Identify the pick-up and place locations.  </li>
+  <li>  Look at the cycle time and repeatability requirements.   </li>
+  <li>  Check the available space, integration, and safety requirements.  </li>
+  <li>  Compare your findings with technical details provided by the manufacturers.  </li>
+</ul>
+
+<h4>Conclusion</h4>
+<p class="pb__20">In short, choosing the right collaborative robot goes beyond just comparing the payload rating and arm reach. You need a solution that meets your actual requirements. </p>
+<p class="pb__20">At <a href="https://risagrobotics.com/" style="color: #000000;font-style: italic;font-weight: 600;text-decoration: underline;"> Risag Robotics</a>, we supply advanced <a href="https://risagrobotics.com/about" style="color: #000000;font-style: italic;font-weight: 600;text-decoration: underline;"> collaborative robot solutions</a> from Techman. You can contact us 
+  and discuss in detail with our team regarding the payload, reach, tooling, workspace, and the application requirements.
+   After careful assessment we will suggest to you the <a href="https://risagrobotics.com/ai-cobot-s" style="color: #000000;font-style: italic;font-weight: 600;text-decoration: underline;"> cobot model</a> that best suits your needs, helping you enhance productivity. 
+
+</p>
+ 
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xxl-4 col-xl-4 col-lg-4">
+          <div class="service__details__right">
+            <div class="common__item">
+              <h5 class="title">Recent Blogs</h5>
+              <div class="recent__wrap">
+                <a href="./how-cobots-are-transforming-automotive-manufacturing-driving-smarter-production-for-uae-manufacturers"
+                  class="recent__items">
+                  <span class="thumb">
+                    <img
+                      src="../assets/img/blogs/how-cobots-are-transforming-automotive-manufacturing-driving-smarter-production-for-uae-manufacturers.webp"
+                      alt="img" />
+                  </span>
+                  <div class="recent__content">
+                    <h6>
+                      How Cobots Are Transforming Automotive Manufacturing:
+                    </h6>
+                    <span class="recent__btn">
+                      <span> Read More </span>
+                      <span class="icon">
+                        <i class="material-symbols-outlined">
+                          arrow_right_alt
+                        </i>
+                      </span>
+                    </span>
+                  </div>
+                </a>
+                <a href="./collaborative-robot-supplier-in-uae-how-to-choose-the-right-partner"
+                  class="recent__items">
+                  <span class="thumb">
+                    <img src="../assets/img/blogs/collaborative-robot-supplier-in-uae-how-to-choose-the-right-partner.webp" alt="img" />
+                  </span>
+                  <div class="recent__content">
+                    <h6>
+                      Collaborative Robot Supplier in UAE: 
+                    </h6>
+                    <span class="recent__btn">
+                      <span> Read More </span>
+                      <span class="icon">
+                        <i class="material-symbols-outlined">
+                          arrow_right_alt
+                        </i>
+                      </span>
+                    </span>
+                  </div>
+                </a>
+                <a href="./cobot-maintenance-guide-how-often-should-you-service-a-cobot" class="recent__items">
+                  <span class="thumb">
+                    <img
+                      src="../assets/img/blogs/cobot-maintenance-guide-how-often-should-you-service-a-cobot.webp"
+                      alt="img" />
+                  </span>
+                  <div class="recent__content">
+                    <h6>
+                      Cobot Maintenance Guide:
+                    </h6>
+                    <span class="recent__btn">
+                      <span> Read More </span>
+                      <span class="icon">
+                        <i class="material-symbols-outlined">
+                          arrow_right_alt
+                        </i>
+                      </span>
+                    </span>
+                  </div>
+                </a>
+                <a href="./building-a-greener-future-sustainable-manufacturing-with-cobots" class="recent__items">
+                  <span class="thumb">
+                    <img src="../assets/img/blogs/building-a-greener-future-sustainable-manufacturing-with-cobots.webp" alt="img" />
+                  </span>
+                  <div class="recent__content">
+                    <h6>Building a Greener Future: </h6>
+                    <span class="recent__btn">
+                      <span> Read More </span>
+                      <span class="icon">
+                        <i class="material-symbols-outlined">
+                          arrow_right_alt
+                        </i>
+                      </span>
+                    </span>
+                  </div>
+                </a>
+                <a href="./is-cobot-automation-worth-it-for-small-factories" class="recent__items">
+                  <span class="thumb">
+                    <img
+                      src="../assets/img/blogs/is-cobot-automation-worth-it-for-small-factories.webp"
+                      alt="img" />
+                  </span>
+                  <div class="recent__content">
+                    <h6> Is Cobot Automation Worth It for Small Factories? </h6>
+                    <span class="recent__btn">
+                      <span> Read More </span>
+                      <span class="icon">
+                        <i class="material-symbols-outlined">
+                          arrow_right_alt
+                        </i>
+                      </span>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--container-->
+  </section>
+  <!-- Blog Details End -->
+
+<!-- Global Footer Start -->
+<div id="footer-blog-placeholder"></div>
+<!-- Global Footer End  -->
+
+<!-- Global Header & Footer Js -->
+<script>
+        // Load the Blog Header
+        fetch('../header-blog.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-blog-placeholder').innerHTML = data);
+
+        // Load the Blog Footer
+        fetch('../footer-blog.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-blog-placeholder').innerHTML = data);
+    </script>
+ <!-- Global Header & Footer Js -->
+
+  <!--Jquery 3 6 0 Min Js-->
+  <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <!-- <script src="/assets/js/jquery-3.6.0.min.js"></script> -->
+
+  <!--Bootstrap bundle Js-->
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <!--Viewport Jquery Js-->
+  <script src="../assets/js/viewport.jquery.js"></script>
+  <!--Odometer min Js-->
+  <script src="../assets/js/odometer.min.js"></script>
+  <!--Magnifiw Popup Js-->
+  <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+  <!--Wow min Js-->
+  <script src="../assets/js/wow.min.js"></script>
+  <!--Owl carousel min Js-->
+  <script src="../assets/js/owl.carousel.min.js"></script>
+  <!--Prijm Js-->
+  <script src="../assets/js/prism.js"></script>
+  <!--main Js-->
+  <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
