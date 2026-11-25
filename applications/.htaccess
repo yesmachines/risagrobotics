@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# Custom 404 page for invalid / missing application URLs
+ErrorDocument 404 /404.html
+
+# Serve .html for extensionless URLs
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^([^/]+)$ $1.html [L]
+
+# Redirect .html URLs to extensionless
+RewriteCond %{THE_REQUEST} \s/applications/([^/\s]+)\.html[\s?] [NC]
+RewriteRule ^([^/]+)\.html$ /applications/$1 [R=301,L]
