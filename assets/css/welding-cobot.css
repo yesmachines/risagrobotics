@@ -1199,10 +1199,18 @@
 }
 
 .welding-cobot__industries .row > [class*="col-"]:first-child {
+   border-color: rgba(23, 33, 31, 0.12);
+   border-top-color: var(--industries-accent);
+   color: var(--industries-ink);
+   background-color: #fff;
+   background-image: repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(23, 33, 31, 0.025) 48px);
+}
+
+.welding-cobot__industries .row > [class*="col-"]:last-child {
    border-color: rgba(255, 255, 255, 0.12);
    border-top-color: var(--industries-accent);
    color: #fff;
-   background-color: var(--industries-ink);
+   background-color: #000;
    background-image: repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(255, 255, 255, 0.035) 48px);
 }
 
@@ -1246,6 +1254,10 @@
 }
 
 .welding-cobot__industries .row > [class*="col-"]:first-child h2 {
+   color: var(--industries-ink);
+}
+
+.welding-cobot__industries .row > [class*="col-"]:last-child h2 {
    color: #fff;
 }
 
@@ -1254,6 +1266,10 @@
    color: var(--industries-muted);
    font-size: 15px;
    line-height: 1.75;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:last-child p {
+   color: #c4cbc6;
 }
 
 .welding-cobot__industries ul {
@@ -1282,8 +1298,8 @@
    align-items: start;
    gap: 13px;
    padding: 13px 0;
-   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-   color: #f1f3f1;
+   border-bottom: 1px solid rgba(23, 33, 31, 0.1);
+   color: var(--industries-ink);
    counter-increment: industry;
 }
 
@@ -1304,7 +1320,7 @@
    height: 30px;
    place-items: center;
    border: 1px solid rgba(214, 91, 53, 0.65);
-   color: #ff9a76;
+   color: var(--industries-accent);
    content: counter(industry, decimal-leading-zero);
    font-family: "Georama", sans-serif;
    font-size: 11px;
@@ -1313,7 +1329,8 @@
 
 .welding-cobot__industries .row > [class*="col-"]:last-child li {
    padding: 12px 0 12px 25px;
-   border-bottom: 1px solid rgba(23, 33, 31, 0.1);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+   color: #f1f3f1;
 }
 
 .welding-cobot__industries .row > [class*="col-"]:last-child li::before {
