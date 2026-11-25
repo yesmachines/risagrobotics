@@ -639,3 +639,227 @@
       transition: none;
    }
 }
+
+.welding-cobot__section__table__structure {
+   --compare-ink: #17211f;
+   --compare-muted: #59645f;
+   --compare-accent: #d65b35;
+   position: relative;
+   isolation: isolate;
+   overflow: hidden;
+   padding: clamp(64px, 8vw, 108px) 0;
+   color: var(--compare-ink);
+   background-color: #f3f5f2;
+   background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.72), transparent 58%), repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(23, 33, 31, 0.025) 48px);
+}
+
+.welding-cobot__section__table__structure .row {
+   display: grid;
+   grid-template-columns: minmax(0, 1fr);
+   gap: 30px;
+   margin: 0;
+}
+
+.welding-cobot__section__table__structure .row > [class*="col-"] {
+   width: 100%;
+   max-width: none;
+   padding-right: 0;
+   padding-left: 0;
+}
+
+.welding-cobot__section__table__structure h2 {
+   max-width: 760px;
+   margin: 0 0 18px;
+   color: var(--compare-ink);
+   font-family: "Georama", sans-serif;
+   font-size: clamp(32px, 4vw, 48px);
+   font-weight: 700;
+   line-height: 1.12;
+}
+
+.welding-cobot__section__table__structure .col-xl-12 > p {
+   max-width: 900px;
+   margin: 0;
+   padding-left: 18px;
+   border-left: 3px solid var(--compare-accent);
+   color: var(--compare-muted);
+   font-size: 16px;
+   line-height: 1.75;
+}
+
+.welding-cobot__section__table {
+   overflow: hidden;
+   border: 1px solid rgba(23, 33, 31, 0.12);
+   background: #fff;
+   box-shadow: 0 20px 50px rgba(23, 33, 31, 0.09);
+}
+
+.welding-cobot__section__table table {
+   width: 100%;
+   margin: 0;
+   border-collapse: separate;
+   border-spacing: 0;
+   table-layout: fixed;
+}
+
+.welding-cobot__section__table thead {
+   color: #fff;
+   background: #202b28;
+}
+
+.welding-cobot__section__table thead th {
+   padding: 22px 26px;
+   color: inherit;
+   font-family: "Georama", sans-serif;
+   font-size: 17px;
+   font-weight: 700;
+   line-height: 1.4;
+   text-align: left;
+   vertical-align: middle;
+}
+
+.welding-cobot__section__table thead th:first-child {
+   width: 24%;
+}
+
+.welding-cobot__section__table thead th:nth-child(2) {
+   width: 38%;
+   background: var(--compare-accent);
+}
+
+.welding-cobot__section__table thead th:last-child {
+   width: 38%;
+}
+
+.welding-cobot__section__table tbody th,
+.welding-cobot__section__table tbody td {
+   padding: 25px 26px;
+   border-bottom: 1px solid rgba(23, 33, 31, 0.09);
+   color: var(--compare-muted);
+   font-size: 15px;
+   line-height: 1.65;
+   text-align: left;
+   vertical-align: middle;
+   transition: background-color 160ms ease;
+}
+
+.welding-cobot__section__table tbody th {
+   color: var(--compare-ink);
+   background: #fafbf9;
+   font-family: "Georama", sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+}
+
+.welding-cobot__section__table tbody td:first-of-type {
+   color: var(--compare-ink);
+   background: #fff7f3;
+}
+
+.welding-cobot__section__table tbody tr:last-child th,
+.welding-cobot__section__table tbody tr:last-child td {
+   border-bottom: 0;
+}
+
+.welding-cobot__section__table tbody tr:hover th,
+.welding-cobot__section__table tbody tr:hover td {
+   background-color: #f4f6f3;
+}
+
+.welding-cobot__section__table tbody tr:hover td:first-of-type {
+   background-color: #ffede4;
+}
+
+@media (max-width: 767px) {
+   .welding-cobot__section__table__structure {
+      padding: 58px 0 64px;
+   }
+
+   .welding-cobot__section__table__structure .row {
+      gap: 24px;
+   }
+
+   .welding-cobot__section__table__structure h2 {
+      margin-bottom: 15px;
+      font-size: clamp(30px, 8vw, 40px);
+   }
+
+   .welding-cobot__section__table__structure .col-xl-12 > p {
+      padding-left: 14px;
+      font-size: 15px;
+   }
+
+   .welding-cobot__section__table {
+      overflow: visible;
+      border: 0;
+      background: transparent;
+      box-shadow: none;
+   }
+
+   .welding-cobot__section__table thead {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      clip-path: inset(50%);
+   }
+
+   .welding-cobot__section__table tbody {
+      display: grid;
+      gap: 14px;
+   }
+
+   .welding-cobot__section__table tbody tr {
+      display: grid;
+      overflow: hidden;
+      border: 1px solid rgba(23, 33, 31, 0.12);
+      background: #fff;
+      box-shadow: 0 10px 24px rgba(23, 33, 31, 0.06);
+   }
+
+   .welding-cobot__section__table tbody th,
+   .welding-cobot__section__table tbody td {
+      padding: 15px 18px;
+      border-bottom: 1px solid rgba(23, 33, 31, 0.09);
+      font-size: 14px;
+      line-height: 1.55;
+   }
+
+   .welding-cobot__section__table tbody th {
+      border-left: 3px solid var(--compare-accent);
+      font-size: 16px;
+   }
+
+   .welding-cobot__section__table tbody td::before {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--compare-muted);
+      font-family: "Georama", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.35;
+      content: attr(data-label);
+   }
+
+   .welding-cobot__section__table tbody td:first-of-type {
+      background: #fff7f3;
+   }
+
+   .welding-cobot__section__table tbody tr:last-child th,
+   .welding-cobot__section__table tbody tr:last-child td {
+      border-bottom: 1px solid rgba(23, 33, 31, 0.09);
+   }
+
+   .welding-cobot__section__table tbody tr:last-child td:last-child {
+      border-bottom: 0;
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .welding-cobot__section__table tbody th,
+   .welding-cobot__section__table tbody td {
+      transition: none;
+   }
+}
