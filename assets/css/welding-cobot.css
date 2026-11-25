@@ -1396,3 +1396,295 @@
       transition: none;
    }
 }
+
+.welding-cobot__faq {
+   --faq-ink: #17211f;
+   --faq-muted: #59645f;
+   --faq-accent: #d65b35;
+   position: relative;
+   isolation: isolate;
+   overflow: hidden;
+   padding: clamp(64px, 8vw, 108px) 0;
+   color: var(--faq-ink);
+   background-color: #f3f5f2;
+   background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.74), transparent 58%), repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(23, 33, 31, 0.025) 48px);
+}
+
+.welding-cobot__faq::before {
+   position: absolute;
+   z-index: -1;
+   top: -150px;
+   right: -100px;
+   width: 340px;
+   height: 340px;
+   border: 1px solid rgba(214, 91, 53, 0.2);
+   content: "";
+   transform: rotate(45deg);
+   pointer-events: none;
+}
+
+.welding-cobot__faq .container {
+   position: relative;
+}
+
+.welding-cobot__faq .container > .row {
+   display: grid;
+   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+   align-items: start;
+   gap: clamp(24px, 4vw, 56px);
+   margin: 0;
+}
+
+.welding-cobot__faq .container > .row > [class*="col-"] {
+   width: 100%;
+   max-width: none;
+   padding-right: 0;
+   padding-left: 0;
+}
+
+.welding-cobot__faq-quote {
+   overflow: hidden;
+   border: 1px solid rgba(23, 33, 31, 0.12);
+   border-top: 4px solid var(--faq-accent);
+   background: #fff;
+   box-shadow: 0 18px 44px rgba(23, 33, 31, 0.08);
+}
+
+.welding-cobot__faq-image {
+   display: grid;
+   min-height: 220px;
+   place-items: center;
+   overflow: hidden;
+   background-color: #eef1ed;
+   background-image: linear-gradient(rgba(23, 33, 31, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 33, 31, 0.035) 1px, transparent 1px);
+   background-size: 30px 30px;
+}
+
+.welding-cobot__faq-image img {
+   display: block;
+   width: 100%;
+   height: 220px;
+   padding: 14px 28px;
+   object-fit: contain;
+}
+
+.welding-cobot__faq-copy {
+   padding: clamp(24px, 3vw, 38px);
+}
+
+.welding-cobot__faq h2 {
+   margin: 0;
+   color: var(--faq-ink);
+   font-family: "Georama", sans-serif;
+   font-size: clamp(28px, 3vw, 38px);
+   font-weight: 700;
+   line-height: 1.14;
+}
+
+.welding-cobot__faq-copy > p {
+   margin: 16px 0 0;
+   color: var(--faq-muted);
+   font-size: 15px;
+   line-height: 1.7;
+}
+
+.welding-cobot__faq-copy ul {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 0 18px;
+   margin: 18px 0 22px;
+   padding: 0;
+   list-style: none;
+}
+
+.welding-cobot__faq-copy li {
+   position: relative;
+   padding: 11px 0 11px 19px;
+   border-bottom: 1px solid rgba(23, 33, 31, 0.1);
+   color: var(--faq-ink);
+   font-size: 14px;
+   line-height: 1.45;
+}
+
+.welding-cobot__faq-copy li::before {
+   position: absolute;
+   top: 17px;
+   left: 2px;
+   width: 7px;
+   height: 7px;
+   background: var(--faq-accent);
+   content: "";
+   transform: rotate(45deg);
+}
+
+.welding-cobot__faq-copy > a {
+   display: inline-flex;
+   min-height: 50px;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+   padding: 0 17px;
+   color: #fff;
+   background: var(--faq-ink);
+   font-size: 14px;
+   font-weight: 700;
+   text-decoration: none;
+   transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.welding-cobot__faq-copy > a::after {
+   width: 8px;
+   height: 8px;
+   border-top: 2px solid currentColor;
+   border-right: 2px solid currentColor;
+   content: "";
+   transform: rotate(45deg);
+}
+
+.welding-cobot__faq-copy > a:hover,
+.welding-cobot__faq-copy > a:focus-visible {
+   background: #303b37;
+   transform: translateY(-2px);
+}
+
+.welding-cobot__faq-copy > a:focus-visible,
+.welding-cobot__faq-list summary:focus-visible {
+   outline: 3px solid rgba(214, 91, 53, 0.48);
+   outline-offset: 3px;
+}
+
+.welding-cobot__faq .faq__wrapper > h2 {
+   margin: 0 0 24px;
+   font-size: clamp(30px, 3.2vw, 42px);
+}
+
+.welding-cobot__faq-list {
+   border-top: 3px solid var(--faq-accent);
+   background: rgba(255, 255, 255, 0.74);
+   box-shadow: 0 18px 44px rgba(23, 33, 31, 0.07);
+}
+
+.welding-cobot__faq-list details {
+   border-bottom: 1px solid rgba(23, 33, 31, 0.12);
+}
+
+.welding-cobot__faq-list details:last-child {
+   border-bottom: 0;
+}
+
+.welding-cobot__faq-list summary {
+   position: relative;
+   display: grid;
+   min-height: 70px;
+   grid-template-columns: minmax(0, 1fr) 24px;
+   align-items: center;
+   gap: 16px;
+   padding: 17px 22px;
+   color: var(--faq-ink);
+   cursor: pointer;
+   font-family: "Georama", sans-serif;
+   font-size: 16px;
+   font-weight: 700;
+   line-height: 1.45;
+   list-style: none;
+   transition: color 160ms ease, background-color 160ms ease;
+}
+
+.welding-cobot__faq-list summary::-webkit-details-marker {
+   display: none;
+}
+
+.welding-cobot__faq-list summary::after {
+   width: 10px;
+   height: 10px;
+   justify-self: center;
+   border-right: 2px solid var(--faq-accent);
+   border-bottom: 2px solid var(--faq-accent);
+   content: "";
+   transform: rotate(45deg) translate(-2px, -2px);
+   transition: transform 160ms ease;
+}
+
+.welding-cobot__faq-list details[open] summary::after {
+   transform: rotate(225deg) translate(-2px, -2px);
+}
+
+.welding-cobot__faq-list summary:hover,
+.welding-cobot__faq-list details[open] summary {
+   color: #a63e22;
+   background: #fff8f4;
+}
+
+.welding-cobot__faq-answer {
+   padding: 0 62px 22px 22px;
+}
+
+.welding-cobot__faq-answer p {
+   margin: 0;
+   padding-left: 15px;
+   border-left: 2px solid rgba(214, 91, 53, 0.58);
+   color: var(--faq-muted);
+   font-size: 14px;
+   line-height: 1.75;
+}
+
+@media (max-width: 767px) {
+   .welding-cobot__faq {
+      padding: 58px 0 64px;
+   }
+
+   .welding-cobot__faq .container > .row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 34px;
+   }
+
+   .welding-cobot__faq-image,
+   .welding-cobot__faq-image img {
+      min-height: 0;
+      height: clamp(190px, 58vw, 270px);
+   }
+
+   .welding-cobot__faq .faq__wrapper > h2 {
+      margin-bottom: 18px;
+      font-size: clamp(30px, 8vw, 38px);
+   }
+
+   .welding-cobot__faq-list summary {
+      min-height: 66px;
+      padding: 16px 18px;
+      font-size: 15px;
+   }
+
+   .welding-cobot__faq-answer {
+      padding: 0 48px 20px 18px;
+   }
+}
+
+@media (max-width: 420px) {
+   .welding-cobot__faq-copy {
+      padding: 24px 20px;
+   }
+
+   .welding-cobot__faq-copy ul {
+      gap: 0 12px;
+   }
+
+   .welding-cobot__faq-list summary {
+      grid-template-columns: minmax(0, 1fr) 18px;
+      gap: 10px;
+      padding: 15px 14px;
+      font-size: 14px;
+   }
+
+   .welding-cobot__faq-answer {
+      padding: 0 32px 18px 14px;
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .welding-cobot__faq-copy > a,
+   .welding-cobot__faq-list summary,
+   .welding-cobot__faq-list summary::after {
+      transition: none;
+   }
+}
