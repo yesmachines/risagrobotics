@@ -454,3 +454,188 @@
       transition: none;
    }
 }
+
+.welding-cobot__section__jobs {
+   --jobs-ink: #17211f;
+   --jobs-muted: #c4cbc6;
+   --jobs-accent: #d65b35;
+   position: relative;
+   isolation: isolate;
+   overflow: hidden;
+   padding: clamp(64px, 8vw, 108px) 0;
+   color: #fff;
+   background-color: #000000;
+   background-image: repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(255, 255, 255, 0.025) 48px);
+}
+
+.welding-cobot__section__jobs::before {
+   position: absolute;
+   z-index: -1;
+   top: -170px;
+   right: -120px;
+   width: 440px;
+   height: 440px;
+   border: 1px solid rgba(214, 91, 53, 0.24);
+   content: "";
+   transform: rotate(45deg);
+   pointer-events: none;
+}
+
+.welding-cobot__section__jobs .row {
+   display: grid;
+   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+   align-items: center;
+   gap: clamp(32px, 6vw, 82px);
+   margin: 0;
+}
+
+.welding-cobot__section__jobs .row > [class*="col-"] {
+   width: 100%;
+   max-width: none;
+   padding-right: 0;
+   padding-left: 0;
+}
+
+.welding-cobot__jobs__image {
+   position: relative;
+   isolation: isolate;
+   height: clamp(340px, 38vw, 490px);
+   overflow: hidden;
+   border-left: 5px solid var(--jobs-accent);
+   background-color: #f0f1ed;
+   box-shadow: 16px 16px 0 rgba(214, 91, 53, 0.12);
+}
+
+.welding-cobot__jobs__image::after {
+   position: absolute;
+   inset: 12px;
+   border: 1px solid rgba(23, 33, 31, 0.18);
+   content: "";
+   pointer-events: none;
+}
+
+.welding-cobot__jobs__image img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center 54%;
+   content: url("../img/application/Applications_11_Welding.webp");
+   transition: transform 350ms ease;
+}
+
+.welding-cobot__jobs__image:hover img {
+   transform: scale(1.025);
+}
+
+.welding-cobot__jobs__content {
+   max-width: 620px;
+}
+
+.welding-cobot__jobs__content h2 {
+   margin: 0 0 20px;
+   color: #fff;
+   font-family: "Georama", sans-serif;
+   font-size: clamp(32px, 3.8vw, 48px);
+   font-weight: 700;
+   line-height: 1.1;
+}
+
+.welding-cobot__jobs__content p {
+   margin: 0;
+   color: var(--jobs-muted);
+   font-size: 16px;
+   line-height: 1.75;
+}
+
+.welding-cobot__jobs__content ul {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   gap: 12px;
+   margin: 28px 0 0;
+   padding: 0;
+   list-style: none;
+}
+
+.welding-cobot__jobs__content li {
+   position: relative;
+   display: flex;
+   min-height: 76px;
+   align-items: center;
+   padding: 14px 14px 14px 36px;
+   border: 1px solid rgba(255, 255, 255, 0.15);
+   color: #f3f5f2;
+   background: rgba(255, 255, 255, 0.045);
+   font-size: 14px;
+   line-height: 1.5;
+   transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+}
+
+.welding-cobot__jobs__content li::before {
+   position: absolute;
+   top: 50%;
+   left: 15px;
+   width: 8px;
+   height: 8px;
+   background-color: var(--jobs-accent);
+   content: "";
+   transform: translateY(-50%) rotate(45deg);
+}
+
+.welding-cobot__jobs__content li:hover {
+   border-color: rgba(214, 91, 53, 0.7);
+   background: rgba(255, 255, 255, 0.08);
+   transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+   .welding-cobot__section__jobs .row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 38px;
+   }
+
+   .welding-cobot__jobs__image {
+      height: clamp(300px, 54vw, 430px);
+   }
+
+   .welding-cobot__jobs__content {
+      max-width: 760px;
+   }
+}
+
+@media (max-width: 575px) {
+   .welding-cobot__section__jobs {
+      padding: 56px 0 64px;
+   }
+
+   .welding-cobot__section__jobs .row {
+      gap: 30px;
+   }
+
+   .welding-cobot__jobs__image {
+      height: clamp(250px, 72vw, 360px);
+      box-shadow: 9px 9px 0 rgba(214, 91, 53, 0.12);
+   }
+
+   .welding-cobot__jobs__content h2 {
+      margin-bottom: 16px;
+      font-size: clamp(30px, 8vw, 40px);
+   }
+
+   .welding-cobot__jobs__content ul {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+      margin-top: 22px;
+   }
+
+   .welding-cobot__jobs__content li {
+      min-height: 62px;
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .welding-cobot__jobs__image img,
+   .welding-cobot__jobs__content li {
+      transition: none;
+   }
+}
