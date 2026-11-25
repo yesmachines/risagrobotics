@@ -892,7 +892,7 @@
 .welding-system__workflow .container {
    position: relative;
    display: grid;
-   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+   grid-template-columns: repeat(2, minmax(0, 1fr));
    align-items: stretch;
    gap: clamp(16px, 2.4vw, 30px);
 }
@@ -900,7 +900,7 @@
 .welding-system__workflow .container > .row {
    grid-column: 1 / -1;
    display: grid;
-   grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+   grid-template-columns: repeat(2, minmax(0, 1fr));
    align-items: stretch;
    gap: clamp(16px, 2.4vw, 30px);
    margin: 0;
