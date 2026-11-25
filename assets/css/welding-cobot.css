@@ -297,7 +297,7 @@
    position: relative;
    isolation: isolate;
    overflow: hidden;
-   padding: clamp(64px, 8vw, 104px) 0;
+   padding: clamp(64px, 8vw, 74px) 0;
    color: var(--why-ink);
    background-color: #f1f3ef;
    background-image: repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(23, 33, 31, 0.025) 48px);
@@ -462,7 +462,7 @@
    position: relative;
    isolation: isolate;
    overflow: hidden;
-   padding: clamp(64px, 8vw, 108px) 0;
+   padding: clamp(64px, 8vw, 58px) 0;
    color: #fff;
    background-color: #000000;
    background-image: repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(255, 255, 255, 0.025) 48px);
@@ -647,7 +647,7 @@
    position: relative;
    isolation: isolate;
    overflow: hidden;
-   padding: clamp(64px, 8vw, 108px) 0;
+   padding: clamp(64px, 8vw, 58px) 0;
    color: var(--compare-ink);
    background-color: #f3f5f2;
    background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.72), transparent 58%), repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(23, 33, 31, 0.025) 48px);
@@ -871,7 +871,7 @@
    position: relative;
    isolation: isolate;
    overflow: hidden;
-   padding: clamp(62px, 8vw, 108px) 0;
+   padding: clamp(62px, 8vw, 58px) 0;
    background-color: #eef1ed;
    background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.72), transparent 62%), repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(23, 33, 31, 0.025) 48px);
 }
@@ -1404,7 +1404,7 @@
    position: relative;
    isolation: isolate;
    overflow: hidden;
-   padding: clamp(64px, 8vw, 108px) 0;
+   padding: clamp(64px, 8vw, 58px) 0;
    color: var(--faq-ink);
    background-color: #f3f5f2;
    background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.74), transparent 58%), repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(23, 33, 31, 0.025) 48px);
@@ -1705,6 +1705,220 @@
    .welding-cobot__faq-copy > a,
    .welding-cobot__faq-list summary,
    .welding-cobot__faq-list summary::after {
+      transition: none;
+   }
+}
+
+.block-content {
+   padding: clamp(48px, 7vw, 88px) 0;
+   background: #fff;
+}
+
+.welding-models {
+   position: relative;
+   padding: clamp(28px, 5vw, 58px);
+   border: 2px dashed #1b1b1b;
+   border-radius: 20px;
+   background: linear-gradient(135deg, #fafafa 0%, #fff 100%);
+   color: #171d1b;
+}
+
+.welding-models__badge {
+   position: absolute;
+   top: -17px;
+   left: clamp(22px, 4vw, 46px);
+   padding: 7px 13px;
+   border-radius: 7px;
+   background: #1b1b1b;
+   color: #fff;
+   font-family: "Georama", sans-serif;
+   font-size: 13px;
+   font-weight: 700;
+   letter-spacing: 0.06em;
+   line-height: 1.3;
+   text-transform: uppercase;
+}
+
+.welding-models h2 {
+   max-width: 900px;
+   margin: 0 0 14px;
+   color: #171d1b;
+   font-family: "Georama", sans-serif;
+   font-size: clamp(30px, 4.2vw, 52px);
+   font-weight: 700;
+   line-height: 1.12;
+}
+
+.welding-models__intro {
+   max-width: 900px;
+   margin: 0;
+   color: #454d49;
+   font-size: clamp(16px, 2vw, 23px);
+   line-height: 1.55;
+}
+
+.welding-models__actions {
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   gap: 18px 28px;
+   margin: 24px 0 34px;
+}
+
+.welding-models__cta {
+   display: inline-flex;
+   min-height: 60px;
+   align-items: center;
+   justify-content: center;
+   gap: 16px;
+   padding: 14px 28px;
+   border: 2px solid #1b1b1b;
+   border-radius: 8px;
+   background: #1b1b1b;
+   color: #fff;
+   font-family: "Georama", sans-serif;
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 1.35;
+   text-align: center;
+   text-decoration: none;
+   transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.welding-models__cta span {
+   font-size: 24px;
+   line-height: 1;
+   transition: transform 180ms ease;
+}
+
+.welding-models__cta:hover {
+   transform: translateY(-2px);
+   border-color: #056b49;
+   background: #056b49;
+   color: #fff;
+}
+
+.welding-models__cta:hover span {
+   transform: translateX(4px);
+}
+
+.welding-models__series-link {
+   color: #1b1b1b;
+   font-size: 15px;
+   font-weight: 700;
+   text-decoration: underline;
+   text-underline-offset: 4px;
+}
+
+.welding-models__series-link:hover {
+   color: #044d37;
+}
+
+.welding-models__list {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+}
+
+.welding-models__list a {
+   display: inline-flex;
+   min-width: 112px;
+   min-height: 54px;
+   align-items: center;
+   justify-content: center;
+   padding: 11px 20px;
+   border: 1px solid #c9cfcc;
+   border-radius: 9px;
+   background: #fff;
+   color: #171d1b;
+   font-family: "Georama", sans-serif;
+   font-size: 17px;
+   font-weight: 700;
+   line-height: 1.25;
+   text-align: center;
+   text-decoration: none;
+   transition: border-color 180ms ease, background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.welding-models__list a:hover {
+    transform: translateY(-2px);
+    border-color: #1b1b1b;
+    background: #090808;
+    color: #fff; 
+}
+
+.welding-models__cta:focus-visible,
+.welding-models__series-link:focus-visible,
+.welding-models__list a:focus-visible {
+   outline: 3px solid #f0a53a;
+   outline-offset: 4px;
+}
+
+.welding-models__note {
+   margin: 12px 0 0;
+   color: #59615d;
+   font-size: 15px;
+   line-height: 1.6;
+}
+
+@media (max-width: 575px) {
+   .block-content {
+      padding: 42px 0 52px;
+   }
+
+   .welding-models {
+      padding: 34px 20px 24px;
+      border-radius: 15px;
+   }
+
+   .welding-models__badge {
+      top: -15px;
+      font-size: 11px;
+   }
+
+   .welding-models h2 {
+      font-size: clamp(28px, 8vw, 36px);
+   }
+
+   .welding-models__actions {
+      align-items: stretch;
+      gap: 14px;
+      margin: 22px 0 26px;
+   }
+
+   .welding-models__cta {
+      width: 100%;
+      min-height: 56px;
+      padding: 12px 16px;
+      font-size: 16px;
+   }
+
+   .welding-models__series-link {
+      align-self: flex-start;
+   }
+
+   .welding-models__list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 9px;
+   }
+
+   .welding-models__list a {
+      min-width: 0;
+      min-height: 48px;
+      padding: 10px 12px;
+      font-size: 15px;
+   }
+
+   .welding-models__note {
+      font-size: 14px;
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .welding-models__cta,
+   .welding-models__cta span,
+   .welding-models__list a {
       transition: none;
    }
 }
