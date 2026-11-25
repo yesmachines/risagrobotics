@@ -182,11 +182,11 @@
 .welding-cobot__cta:focus-visible,
 .welding-cobot__content > a:hover,
 .welding-cobot__content > a:focus-visible {
-   border-color: var(--welding-accent);
-   color: #fff;
-   background: var(--welding-accent);
-   box-shadow: 0 10px 24px rgba(214, 91, 53, 0.28);
-   transform: translateY(-2px);
+     border-color: #3a3a3a;
+    color: #fff;
+    background: #212121;
+    box-shadow: 0 10px 24px rgb(53 53 53 / 28%);
+    transform: translateY(-2px);
 }
 
 .welding-cobot__cta:focus-visible,
