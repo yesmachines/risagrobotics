@@ -1138,3 +1138,244 @@
       font-size: 13px;
    }
 }
+
+.welding-cobot__industries {
+   --industries-ink: #17211f;
+   --industries-muted: #59645f;
+   --industries-accent: #d65b35;
+   position: relative;
+   isolation: isolate;
+   overflow: hidden;
+   padding: clamp(64px, 8vw, 104px) 0;
+   color: var(--industries-ink);
+   background-color: #eef1ed;
+   background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.78), transparent 62%), repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(23, 33, 31, 0.025) 48px);
+}
+
+.welding-cobot__industries::before {
+   position: absolute;
+   z-index: -1;
+   top: -150px;
+   right: -100px;
+   width: 340px;
+   height: 340px;
+   border: 1px solid rgba(214, 91, 53, 0.2);
+   content: "";
+   transform: rotate(45deg);
+   pointer-events: none;
+}
+
+.welding-cobot__industries > .container {
+   position: relative;
+}
+
+.welding-cobot__industries .row {
+   display: grid;
+   grid-template-columns: repeat(2, minmax(0, 1fr));
+   align-items: stretch;
+   gap: clamp(16px, 2.4vw, 30px);
+   margin: 0;
+}
+
+.welding-cobot__industries .row > [class*="col-"] {
+   position: relative;
+   min-width: 0;
+   min-height: 360px;
+   overflow: hidden;
+   width: 100%;
+   max-width: none;
+   padding: clamp(28px, 3.2vw, 44px);
+   border: 1px solid rgba(23, 33, 31, 0.12);
+   border-top: 4px solid var(--industries-accent);
+   background: #fff;
+   box-shadow: 0 18px 44px rgba(23, 33, 31, 0.08);
+   flex: none;
+   transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:hover {
+   box-shadow: 0 22px 50px rgba(23, 33, 31, 0.12);
+   transform: translateY(-3px);
+}
+
+.welding-cobot__industries .row > [class*="col-"]:first-child {
+   border-color: rgba(255, 255, 255, 0.12);
+   border-top-color: var(--industries-accent);
+   color: #fff;
+   background-color: var(--industries-ink);
+   background-image: repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(255, 255, 255, 0.035) 48px);
+}
+
+.welding-cobot__industries .row > [class*="col-"]::after {
+   position: absolute;
+   z-index: 0;
+   right: -26px;
+   bottom: -34px;
+   width: min(58%, 300px);
+   aspect-ratio: 1;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   content: "";
+   opacity: 0.12;
+   pointer-events: none;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:first-child::after {
+   background-image: url("../img/application/Applications_11_Welding.webp");
+}
+
+.welding-cobot__industries .row > [class*="col-"]:last-child::after {
+   background-image: url("../img/AI-Cobot-s/TM12S.png");
+   opacity: 0.1;
+}
+
+.welding-cobot__industries .row > [class*="col-"] > * {
+   position: relative;
+   z-index: 1;
+}
+
+.welding-cobot__industries h2 {
+   max-width: 520px;
+   margin: 0 0 20px;
+   color: var(--industries-ink);
+   font-family: "Georama", sans-serif;
+   font-size: clamp(28px, 2.8vw, 38px);
+   font-weight: 700;
+   line-height: 1.14;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:first-child h2 {
+   color: #fff;
+}
+
+.welding-cobot__industries p {
+   margin: 0 0 14px;
+   color: var(--industries-muted);
+   font-size: 15px;
+   line-height: 1.75;
+}
+
+.welding-cobot__industries ul {
+   display: grid;
+   gap: 0;
+   margin: 20px 0 0;
+   padding: 0;
+   list-style: none;
+}
+
+.welding-cobot__industries li {
+   position: relative;
+   min-width: 0;
+   color: var(--industries-ink);
+   font-size: 14px;
+   line-height: 1.6;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:first-child ul {
+   counter-reset: industry;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:first-child li {
+   display: grid;
+   grid-template-columns: 30px minmax(0, 1fr);
+   align-items: start;
+   gap: 13px;
+   padding: 13px 0;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+   color: #f1f3f1;
+   counter-increment: industry;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:first-child li:first-child,
+.welding-cobot__industries .row > [class*="col-"]:last-child li:first-child {
+   padding-top: 0;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:first-child li:last-child,
+.welding-cobot__industries .row > [class*="col-"]:last-child li:last-child {
+   padding-bottom: 0;
+   border-bottom: 0;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:first-child li::before {
+   display: grid;
+   width: 30px;
+   height: 30px;
+   place-items: center;
+   border: 1px solid rgba(214, 91, 53, 0.65);
+   color: #ff9a76;
+   content: counter(industry, decimal-leading-zero);
+   font-family: "Georama", sans-serif;
+   font-size: 11px;
+   font-weight: 700;
+}
+
+.welding-cobot__industries .row > [class*="col-"]:last-child li {
+   padding: 12px 0 12px 25px;
+   border-bottom: 1px solid rgba(23, 33, 31, 0.1);
+}
+
+.welding-cobot__industries .row > [class*="col-"]:last-child li::before {
+   position: absolute;
+   top: 1.15em;
+   left: 3px;
+   width: 8px;
+   height: 5px;
+   border-bottom: 2px solid var(--industries-accent);
+   border-left: 2px solid var(--industries-accent);
+   content: "";
+   transform: rotate(-45deg);
+}
+
+.welding-cobot__industries .row > [class*="col-"]:last-child li:first-child::before {
+   top: 0.4em;
+}
+
+@media (max-width: 767px) {
+   .welding-cobot__industries {
+      padding: 56px 0 64px;
+   }
+
+   .welding-cobot__industries .row {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+   }
+
+   .welding-cobot__industries .row > [class*="col-"] {
+      min-height: 0;
+      padding: 28px 24px;
+   }
+
+   .welding-cobot__industries h2 {
+      margin-bottom: 16px;
+      font-size: clamp(27px, 7vw, 34px);
+   }
+
+   .welding-cobot__industries ul {
+      margin-top: 16px;
+   }
+
+   .welding-cobot__industries .row > [class*="col-"]::after {
+      right: -28px;
+      bottom: -24px;
+      width: min(48%, 230px);
+      opacity: 0.1;
+   }
+}
+
+@media (max-width: 420px) {
+   .welding-cobot__industries .row > [class*="col-"] {
+      padding: 24px 20px;
+   }
+
+   .welding-cobot__industries li {
+      font-size: 13px;
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .welding-cobot__industries .row > [class*="col-"] {
+      transition: none;
+   }
+}
