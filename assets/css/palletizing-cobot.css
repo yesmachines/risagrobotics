@@ -643,6 +643,7 @@
 .palletizing-closing {
    padding-top: 30px;
    text-align: center;
+   background: #f2f2f2;
 }
 
 .palletizing-closing__inner {
@@ -662,7 +663,11 @@
 }
 
 .palletizing-closing .palletizing-button {
-   margin-top: 12px;
+   margin-top: 12px; 
+}
+
+.palletizing-closing .palletizing-button:hover { 
+   background: #fff;
 }
 
 .palletizing-model-note {
