@@ -18,7 +18,7 @@
 }
 
 .palletizing-container {
-   width: min(1200px, calc(100% - 48px));
+   width: clamp(300px, 90%, 1600px);
    margin: 0 auto;
 }
 
@@ -54,7 +54,7 @@
    position: relative;
    isolation: isolate;
   padding: clamp(80px, 12vw, 180px) 0 clamp(48px, 7vw, 96px);
-   background: #ccc;
+   background: #faf9f9;
 }
 
 .palletizing-hero__glow {
@@ -66,7 +66,7 @@
    height: 620px;
    border: 1px solid #000;
    border-radius: 50%;
-   box-shadow: 0 0 0 72px #ccc, 0 0 0 144px #ccc;
+   box-shadow: 0 0 0 72px #f5f5f5, 0 0 0 144px #f5f5f5;
 }
 
 .palletizing-hero__grid {
@@ -102,7 +102,8 @@
 }
 
 .palletizing-breadcrumb [aria-current="page"] {
-   color: var(--pallet-orange-dark);
+    color: #6b6b6b;
+    font-style: italic;
 }
 
 .palletizing-hero h1 {
@@ -157,10 +158,7 @@
    position: relative;
    z-index: 1;
    height: clamp(310px, 38vw, 470px);
-   overflow: hidden;
-   border: 10px solid #ccc;
-   border-radius: 8px;
-   background: #ccc;
+   overflow: hidden; 
    box-shadow: 0 24px 70px #ccc;
 }
 
@@ -232,7 +230,7 @@
 }
 
 .palletizing-benefits {
-   background: #ccc;
+   background: #fff;
 }
 
 .palletizing-card-grid {
@@ -245,12 +243,13 @@
 }
 
 .palletizing-card {
-   position: relative;
-   min-width: 0;
-   border: 1px solid var(--pallet-line);
-   border-radius: 7px;
-   background: #ccc;
-   transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    position: relative;
+    min-width: 0;
+    border-top: 3px solid #343434;
+    border-radius: 7px;
+    background: #fefefe;
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    box-shadow: 0 18px 38px #ccc;
 }
 
 .palletizing-card:hover {
