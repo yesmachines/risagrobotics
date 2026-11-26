@@ -598,52 +598,30 @@
    margin-bottom: 0;
 }
 
-.pp-faq__list {
-   border-top: 1px solid var(--pp-line);
+.pp-faq .accordion-header {
+   margin: 0;
+   letter-spacing: normal;
 }
 
-.pp-faq__list details {
-   border-bottom: 1px solid var(--pp-line);
+.pp-faq .accordion-button {
+   gap: 20px;
+   text-align: left;
 }
 
-.pp-faq__list summary {
-   display: flex;
-   min-height: 70px;
-   align-items: center;
-   justify-content: space-between;
-   gap: 22px;
-   padding: 17px 0;
-   cursor: pointer;
-   font-size: 0.94rem;
-   font-weight: 600;
-   line-height: 1.5;
-   list-style: none;
-}
-
-.pp-faq__list summary::-webkit-details-marker {
-   display: none;
-}
-
-.pp-faq__list summary::after {
-   content: "+";
+.pp-faq .accordion-button::after {
    flex: 0 0 auto;
-   font-size: 1.35rem;
-   font-weight: 400;
-   transition: transform 180ms ease;
 }
 
-.pp-faq__list details[open] summary::after {
-   transform: rotate(45deg);
+.pp-faq .accordion-body p {
+   margin-bottom: 0;
 }
 
-.pp-faq__list details > p {
-   max-width: 740px;
-   margin: 0 35px 22px 0;
-   font-size: 0.86rem;
+.pp-faq .accordion-button:focus-visible {
+   outline: 2px solid currentColor;
+   outline-offset: -6px;
 }
 
-.pick-place a:focus-visible,
-.pick-place summary:focus-visible {
+.pick-place a:focus-visible {
    outline: 2px solid var(--pp-ink);
    outline-offset: 4px;
 }

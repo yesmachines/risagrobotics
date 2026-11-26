@@ -282,33 +282,83 @@
             <div class="pp-faq__intro">
                <h2 id="pp-faq-title">Frequently Asked Questions</h2>
             </div>
-            <div class="pp-faq__list">
-               <details>
-                  <summary>How much does a pick and place cobot cost in the UAE?</summary>
-                  <p>It depends on several factors, such as payload, reach, gripper, vision requirements, and other details.</p>
-               </details>
-               <details>
-                  <summary>How fast is a pick-and-place cobot?</summary>
-                  <p>The cycle time is determined by product weight, gripping method, distance, and placement accuracy.</p>
-               </details>
-               <details>
-                  <summary>Can a pick and place cobot handle different shapes and sizes? Does it use vision?</summary>
-                  <p>Yes. It can handle different products once it's configured for a particular application.</p>
-               </details>
-               <details>
-                  <summary>What grippers can be used with a pick and place robot?</summary>
-                  <p>Commonly used grippers are vacuum grippers and soft grippers. The right choice still has to be made
-                     based on product weight, required reach, and cycle times.</p>
-               </details>
-               <details>
-                  <summary>Can a pick and place cobot work with conveyors, feeders, and machines?</summary>
-                  <p>Yes. They are highly integratable with existing production equipment such as conveyors, sensors,
-                     and machines.</p>
-               </details>
-               <details>
-                  <summary>Can a pick and place cobot sort products into different groups?</summary>
-                  <p>Yes, their suitable vision system can. It depends on different positions and programming requirements.</p>
-               </details>
+            <div class="main__accordion__content">
+               <div class="accordion__wrap">
+                  <div class="accordion" id="ppFaqAccordion">
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="ppFaqHeadingOne">
+                           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#ppFaqCollapseOne" aria-expanded="true" aria-controls="ppFaqCollapseOne">
+                              How much does a pick and place cobot cost in the UAE?
+                           </button>
+                        </h3>
+                        <div id="ppFaqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="ppFaqHeadingOne" data-bs-parent="#ppFaqAccordion">
+                           <div class="accordion-body">
+                              <p>It depends on several factors, such as payload, reach, gripper, vision requirements, and other details.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="ppFaqHeadingTwo">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ppFaqCollapseTwo" aria-expanded="false" aria-controls="ppFaqCollapseTwo">
+                              How fast is a pick-and-place cobot?
+                           </button>
+                        </h3>
+                        <div id="ppFaqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="ppFaqHeadingTwo" data-bs-parent="#ppFaqAccordion">
+                           <div class="accordion-body">
+                              <p>The cycle time is determined by product weight, gripping method, distance, and placement accuracy.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="ppFaqHeadingThree">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ppFaqCollapseThree" aria-expanded="false" aria-controls="ppFaqCollapseThree">
+                              Can a pick and place cobot handle different shapes and sizes? Does it use vision?
+                           </button>
+                        </h3>
+                        <div id="ppFaqCollapseThree" class="accordion-collapse collapse" aria-labelledby="ppFaqHeadingThree" data-bs-parent="#ppFaqAccordion">
+                           <div class="accordion-body">
+                              <p>Yes. It can handle different products once it's configured for a particular application.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="ppFaqHeadingFour">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ppFaqCollapseFour" aria-expanded="false" aria-controls="ppFaqCollapseFour">
+                              What grippers can be used with a pick and place robot?
+                           </button>
+                        </h3>
+                        <div id="ppFaqCollapseFour" class="accordion-collapse collapse" aria-labelledby="ppFaqHeadingFour" data-bs-parent="#ppFaqAccordion">
+                           <div class="accordion-body">
+                              <p>Commonly used grippers are vacuum grippers and soft grippers. The right choice still has to be made based on product weight, required reach, and cycle times.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="ppFaqHeadingFive">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ppFaqCollapseFive" aria-expanded="false" aria-controls="ppFaqCollapseFive">
+                              Can a pick and place cobot work with conveyors, feeders, and machines?
+                           </button>
+                        </h3>
+                        <div id="ppFaqCollapseFive" class="accordion-collapse collapse" aria-labelledby="ppFaqHeadingFive" data-bs-parent="#ppFaqAccordion">
+                           <div class="accordion-body">
+                              <p>Yes. They are highly integratable with existing production equipment such as conveyors, sensors, and machines.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h3 class="accordion-header" id="ppFaqHeadingSix">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ppFaqCollapseSix" aria-expanded="false" aria-controls="ppFaqCollapseSix">
+                              Can a pick and place cobot sort products into different groups?
+                           </button>
+                        </h3>
+                        <div id="ppFaqCollapseSix" class="accordion-collapse collapse" aria-labelledby="ppFaqHeadingSix" data-bs-parent="#ppFaqAccordion">
+                           <div class="accordion-body">
+                              <p>Yes, their suitable vision system can. It depends on different positions and programming requirements.</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
       </section>
@@ -339,7 +389,6 @@
    <script src="assets/js/owl.carousel.min.js"></script>
    <script src="assets/js/prism.js"></script>
    <script src="assets/js/main.js"></script>
-   <script src="assets/js/pick-and-place-cobot.js"></script>
 </body>
 
 </html>
