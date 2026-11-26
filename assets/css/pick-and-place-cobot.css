@@ -54,7 +54,7 @@
 }
 
 .pp-container {
-   width: min(1200px, calc(100% - 64px));
+   width: clamp(300px, 90%, 1600px);
    margin: 0 auto;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .pp-hero {
-   padding: clamp(48px, 7vw, 88px) 0 74px;
+   padding: clamp(80px, 12vw, 120px) 0 clamp(48px, 7vw, 96px);
    background: var(--pp-paper);
 }
 
@@ -108,7 +108,7 @@
 .pp-hero h1 {
    max-width: 720px;
    margin-bottom: 23px;
-   font-size: clamp(3rem, 5.3vw, 5.45rem);
+   font-size: clamp(3rem, 5.3vw, 4.45rem);
    line-height: 1.01;
    letter-spacing: -0.065em;
 }
@@ -237,12 +237,13 @@
 }
 
 .pp-benefit {
-   position: relative;
-   min-height: 270px;
-   padding: 27px 27px 30px;
-   border: 1px solid var(--pp-line);
-   background: var(--pp-paper);
-   transition: transform 180ms ease, border-color 180ms ease;
+    position: relative;
+    min-height: 270px;
+    padding: 27px 27px 30px;
+    border-radius: 10px;
+    border-top: 3px solid rgb(0 0 0);
+    background: var(--pp-paper);
+    transition: transform 180ms ease, border-color 180ms ease;
 }
 
 .pp-benefit:hover {
@@ -387,14 +388,12 @@
 }
 
 .pp-steps {
-   display: grid;
-   grid-template-columns: repeat(4, minmax(0, 1fr));
+   display: grid; 
    border-top: 1px solid rgba(250, 249, 249, 0.34);
    border-bottom: 1px solid rgba(250, 249, 249, 0.34);
 }
 
-.pp-step {
-   min-height: 220px;
+.pp-step { 
    padding: 25px 22px;
    border-right: 1px solid rgba(250, 249, 249, 0.34);
 }
@@ -405,6 +404,7 @@
 
 .pp-step:last-child {
    border-right: 0;
+   text-align: center;
 }
 
 .pp-step__number {
@@ -665,9 +665,13 @@
    .pp-benefit__number {
       margin-bottom: 20px;
    }
+   .pp-process .pp-section-head
+   {
+      text-align: left;
+   }
 
-   .pp-steps {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+   .pp-step:last-child {
+  text-align: left;
    }
 
    .pp-step:nth-child(2) {
@@ -717,9 +721,7 @@
       padding: 68px 0;
    }
 
-   .pp-hero {
-      padding: 35px 0 58px;
-   }
+ 
 
    .pp-hero__grid,
    .pp-content-grid,
@@ -751,6 +753,10 @@
 
    .pp-section-head {
       margin-bottom: 36px;
+      text-align: left;
+   }
+   .pp-step p {
+      text-align: left;
    }
 
    .pp-section-head h2,
@@ -846,6 +852,7 @@
       border: 0;
       background: var(--pp-ink);
       color: var(--pp-paper);
+      width: 100%;
    }
 
    .pp-table-wrap tbody td {
