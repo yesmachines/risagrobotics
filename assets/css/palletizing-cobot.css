@@ -443,7 +443,7 @@
 }
 
 .palletizing-workflow {
-   background: var(--pallet-soft);
+   background: #000000;
 }
 
 .palletizing-workflow__grid {
@@ -458,12 +458,29 @@
    margin-bottom: 0;
 }
 
+.palletizing-workflow__grid > .palletizing-section-heading .palletizing-kicker,
+.palletizing-workflow__grid > .palletizing-section-heading h2 {
+   color: #fff;
+}
+
+.palletizing-workflow__grid > .palletizing-section-heading p {
+   color: #d6d6d6;
+}
+
 .palletizing-solution-card {
    padding: clamp(26px, 4vw, 42px);
-   border: 1px solid #000;
+   border: 1px solid #111;
    border-radius: 8px;
-   background: #ccc;
-   box-shadow: 0 18px 48px #ccc;
+   background: #fff;
+   box-shadow: 0 18px 48px rgba(255, 255, 255, 0.55);
+}
+
+.palletizing-solution-card .palletizing-kicker {
+   color: #3e3e3e;
+}
+
+.palletizing-solution-card > p {
+   color: #555;
 }
 
 .palletizing-solution-card h2 {
