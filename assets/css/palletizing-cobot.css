@@ -64,7 +64,7 @@
    right: -120px;
    width: 620px;
    height: 620px;
-   border: 1px solid #000;
+   border: 1px solid #c8c8c8;
    border-radius: 50%;
    box-shadow: 0 0 0 72px #f5f5f5, 0 0 0 144px #f5f5f5;
 }
@@ -744,7 +744,9 @@
       width: min(100% - 36px, 540px);
    }
 
-   
+   .palletizing-hero__glow {
+ display: none;
+}
 
    .palletizing-hero__grid,
    .palletizing-handling__grid,
@@ -841,6 +843,7 @@
       border: 0;
       background: var(--pallet-ink);
       color: #ccc;
+      width: 100%;
    }
 
    .palletizing-table-wrap tbody td {
