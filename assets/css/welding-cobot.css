@@ -1,292 +1,226 @@
-.welding-cobot__section {
-   --welding-ink: #161616;
-   --welding-muted: #59645f;
-   --welding-accent: #00000000;
-   padding: clamp(56px, 8vw, 112px) 0;
+.welding-hero {
+   --welding-ink: #000;
+   --welding-paper: #faf9f9;
+   --welding-muted: rgba(0, 0, 0, 0.68);
+   --welding-line: rgba(0, 0, 0, 0.15);
+   padding: clamp(80px, 12vw, 120px) 0 clamp(48px, 7vw, 96px);
    overflow: hidden;
    color: var(--welding-ink);
-   background-color: #f3f5f2;
-   background-image: linear-gradient(115deg, rgba(255, 255, 255, 0.72), transparent 58%), repeating-linear-gradient(0deg, transparent, transparent 47px, rgba(23, 33, 31, 0.025) 48px);
+   background: var(--welding-paper);
+   font-family: "Georama", sans-serif;
 }
 
-   .welding-cobot__layout,
-   .welding-cobot__section .row {
+.welding-hero *,
+.welding-hero *::before,
+.welding-hero *::after {
+   box-sizing: border-box;
+}
+
+.welding-hero__grid {
    display: grid;
    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
    align-items: center;
-   gap: clamp(36px, 7vw, 96px);
-   margin: 0;
+   gap: clamp(45px, 7vw, 95px);
 }
 
-.welding-cobot__layout > [class*="col-"],
-.welding-cobot__section .row > [class*="col-"] {
-   width: 100%;
-   max-width: none;
-   flex: none;
-   padding-right: 0;
-   padding-left: 0;
-}
-
-.welding-cobot__image {
+.welding-hero__copy {
    position: relative;
-   isolation: isolate;
-   display: flex;
-   min-height: 360px;
-   align-items: center;
-   justify-content: center;
-   overflow: hidden;
-   border: 1px solid rgba(23, 33, 31, 0.12);
-   background-color: #fff;
-   background-image: linear-gradient(rgba(23, 33, 31, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(23, 33, 31, 0.035) 1px, transparent 1px);
-   background-size: 32px 32px;
-}
-
-.welding-cobot__image::after {
-   position: absolute;
-   z-index: -1;
-   right: -42px;
-   bottom: -82px;
-   width: 220px;
-   height: 220px;
-   border: 1px solid rgba(214, 91, 53, 0.32);
-   content: "";
-   transform: rotate(45deg);
-}
-
-.welding-cobot__image img {
-   display: block;
-   width: 100%;
-   max-height: 470px;
-   aspect-ratio: 1.12;
-   padding: clamp(18px, 4vw, 48px);
-   object-fit: contain;
-   content: url("../img/application/Applications_11_Welding.webp");
-}
-
-.welding-cobot__image-label,
-.welding-cobot__image-caption {
-   position: absolute;
    z-index: 1;
-   left: 20px;
-   padding: 10px 12px;
-   color: var(--welding-ink);
-   background: rgba(255, 255, 255, 0.94);
-   font-family: "Georama", sans-serif;
-   font-size: 10px;
-   font-weight: 700;
-   line-height: 1.2;
-   letter-spacing: 0.08em;
 }
 
-.welding-cobot__image-label {
-   top: 20px;
-   border-left: 3px solid var(--welding-accent);
-}
-
-.welding-cobot__image-caption {
-   bottom: 20px;
-   color: #fff;
-   background: var(--welding-ink);
-}
-
-.welding-cobot__content {
-   max-width: 600px;
-}
-
-.welding-cobot__eyebrow {
+.welding-hero__breadcrumb {
    display: flex;
+   flex-wrap: wrap;
    align-items: center;
-   gap: 12px;
-   margin: 0 0 18px;
-   color: var(--welding-accent);
-   font-size: 12px;
-   font-weight: 700;
-   letter-spacing: 0.1em;
+   gap: 10px;
+   margin-bottom: 27px;
+   font-size: 0.75rem;
 }
 
-.welding-cobot__eyebrow::before {
-   width: 28px;
-   height: 2px;
-   background: currentColor;
-   content: "";
+.welding-hero__breadcrumb a,
+.welding-hero__breadcrumb a:hover {
+   color: inherit;
+   text-decoration: none;
 }
 
-.welding-cobot__content h2 {
-   margin: 0 0 22px;
+.welding-hero__breadcrumb a:hover {
+   text-decoration: underline;
+   text-underline-offset: 3px;
+}
+
+.welding-hero__breadcrumb > span:not([aria-current]) {
+   opacity: 0.45;
+}
+
+.welding-hero__breadcrumb [aria-current] {
+   color: var(--welding-muted);
+}
+
+.welding-hero h1 {
+   max-width: 720px;
+   margin: 0 0 23px;
    color: var(--welding-ink);
    font-family: "Georama", sans-serif;
-   font-size: clamp(34px, 4vw, 54px);
-   font-weight: 700;
-   line-height: 1.08;
+   font-size: clamp(3rem, 5.3vw, 4.45rem);
+   font-weight: 650;
+   line-height: 1.01;
+   letter-spacing: -0.065em;
 }
 
-.welding-cobot__content > p:not(.welding-cobot__eyebrow) {
-   margin: 0 0 16px;
+.welding-hero__intro {
+   max-width: 650px;
+   margin-bottom: 28px;
+}
+
+.welding-hero__intro p {
+   margin: 0;
    color: var(--welding-muted);
-   font-size: 16px;
-   line-height: 1.75;
+   font-size: 1rem;
+   line-height: 1.78;
 }
 
-.welding-cobot__content .welding-cobot__intro {
-   color: var(--welding-ink);
-   font-size: 18px;
-   line-height: 1.65;
+.welding-hero__intro p + p {
+   margin-top: 14px;
 }
 
-.welding-cobot__benefits {
-   display: grid;
-   gap: 12px;
-   margin: 25px 0 30px;
-   padding: 0;
-   list-style: none;
+.welding-hero__actions {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 14px;
 }
 
-.welding-cobot__benefits li {
-   position: relative;
-   padding-left: 26px;
-   color: var(--welding-ink);
-   font-size: 15px;
-   line-height: 1.5;
-}
-
-.welding-cobot__benefits li::before {
-   position: absolute;
-   top: 0.55em;
-   left: 2px;
-   width: 9px;
-   height: 9px;
-   border: 2px solid var(--welding-accent);
-   content: "";
-   transform: rotate(45deg);
-}
-
-.welding-cobot__cta,
-.welding-cobot__content > a {
+.welding-hero__button {
    display: inline-flex;
-   min-height: 54px;
+   min-height: 55px;
    align-items: center;
    justify-content: center;
    gap: 22px;
-   padding: 0 20px;
+   padding: 0 22px;
    border: 1px solid var(--welding-ink);
-   color: #fff;
+   color: var(--welding-paper);
    background: var(--welding-ink);
-   font-size: 14px;
-   font-weight: 700;
-   box-shadow: 0 8px 18px rgba(23, 33, 31, 0.16);
+   font-size: 0.86rem;
+   font-weight: 650;
    text-decoration: none;
-   transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+   transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
-.welding-cobot__cta:hover,
-.welding-cobot__cta:focus-visible,
-.welding-cobot__content > a:hover,
-.welding-cobot__content > a:focus-visible {
-     border-color: #3a3a3a;
-    color: #fff;
-    background: #212121;
-    box-shadow: 0 10px 24px rgb(53 53 53 / 28%);
-    transform: translateY(-2px);
+.welding-hero__button:hover {
+   color: var(--welding-ink);
+   background: var(--welding-paper);
+   transform: translateY(-2px);
 }
 
-.welding-cobot__cta:focus-visible,
-.welding-cobot__content > a:focus-visible {
-   outline: 3px solid rgba(214, 91, 53, 0.35);
-   outline-offset: 3px;
+.welding-hero__button > span {
+   font-size: 1.1rem;
 }
 
-.welding-cobot__content > a::after {
-   width: 9px;
-   height: 9px;
-   border-top: 2px solid currentColor;
-   border-right: 2px solid currentColor;
-   content: "";
-   transform: rotate(45deg);
+.welding-hero a:focus-visible {
+   outline: 2px solid var(--welding-ink);
+   outline-offset: 4px;
 }
 
-.welding-cobot__cta-arrow {
+.welding-hero__visual {
    position: relative;
-   width: 18px;
-   height: 1px;
-   background: currentColor;
-   transition: width 180ms ease;
+   padding: 22px 22px 22px 0;
 }
 
-.welding-cobot__cta-arrow::after {
+.welding-hero__visual::before {
    position: absolute;
-   top: -4px;
+   top: 0;
    right: 0;
-   width: 8px;
-   height: 8px;
-   border-top: 1px solid currentColor;
-   border-right: 1px solid currentColor;
+   width: 74%;
+   height: 74%;
+   border-top: 1px solid var(--welding-line);
+   border-right: 1px solid var(--welding-line);
    content: "";
-   transform: rotate(45deg);
 }
 
-.welding-cobot__cta:hover .welding-cobot__cta-arrow,
-.welding-cobot__cta:focus-visible .welding-cobot__cta-arrow {
-   width: 24px;
+.welding-hero__image {
+   position: relative;
+   height: clamp(340px, 39vw, 510px);
+   overflow: hidden;
+   background: var(--welding-paper);
 }
 
-@media (max-width: 991px) {
-   .welding-cobot__layout,
-   .welding-cobot__section .row {
-      grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
-      gap: 36px;
-   }
+.welding-hero__image::after {
+   position: absolute;
+   inset: 0;
+   border: 1px solid var(--welding-line);
+   content: "";
+}
 
-   .welding-cobot__image {
-      min-height: 320px;
-   }
+.welding-hero__image img {
+   display: block;
+   width: 100%;
+   height: 100%;
+   filter: grayscale(1);
+   object-fit: cover;
+   object-position: center;
+}
 
-   .welding-cobot__image-label,
-   .welding-cobot__image-caption {
-      left: 12px;
-      font-size: 9px;
+.welding-hero__corner {
+   position: absolute;
+   z-index: 1;
+   width: 19px;
+   height: 19px;
+   border-color: var(--welding-ink);
+   border-style: solid;
+}
+
+.welding-hero__corner--top {
+   top: 12px;
+   right: 12px;
+   border-width: 1px 1px 0 0;
+}
+
+.welding-hero__corner--bottom {
+   bottom: 12px;
+   left: 10px;
+   border-width: 0 0 1px 1px;
+}
+
+@media (max-width: 980px) {
+   .welding-hero__grid {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+      gap: 38px;
    }
 }
 
-@media (max-width: 767px) {
-   .welding-cobot__section {
-      padding: 56px 0 64px;
+@media (max-width: 700px) {
+   .welding-hero__grid {
+      grid-template-columns: 1fr;
+      gap: 33px;
    }
 
-   .welding-cobot__layout,
-   .welding-cobot__section .row {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 34px;
+   .welding-hero h1 {
+      font-size: clamp(2.85rem, 12vw, 4.5rem);
    }
 
-   .welding-cobot__image {
-      min-height: 0;
+   .welding-hero__intro p {
+      font-size: 0.94rem;
    }
 
-   .welding-cobot__image img {
-      max-height: 380px;
-      aspect-ratio: 1.18;
-      padding: 38px 28px;
+   .welding-hero__visual {
+      margin-right: 7px;
+      padding: 16px 16px 16px 0;
    }
 
-   .welding-cobot__content h2 {
-      font-size: clamp(34px, 9vw, 44px);
+   .welding-hero__image {
+      height: clamp(300px, 83vw, 450px);
    }
 }
 
 @media (max-width: 420px) {
-   .welding-cobot__image-label,
-   .welding-cobot__image-caption {
-      left: 8px;
-      padding: 8px;
-      font-size: 8px;
+   .welding-hero__button {
+      width: 100%;
+      justify-content: space-between;
    }
+}
 
-   .welding-cobot__image-label {
-      top: 10px;
-   }
-
-   .welding-cobot__image-caption {
-      bottom: 10px;
+@media (prefers-reduced-motion: reduce) {
+   .welding-hero__button {
+      transition: none;
    }
 }
 
