@@ -18158,7 +18158,7 @@ body > #exampleModalCenter.modal .modal-content #product_form label.product-form
     margin-top: 0 !important;
     opacity: 0 !important;
     visibility: hidden !important;
-    min-width: 220px;
+    min-width: 240px;
     box-shadow: -11px 4px 70px -25px rgb(0 0 0 / 44%);
     transition: opacity 0.3s ease, visibility 0.3s ease;
   }
