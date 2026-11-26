@@ -1,7 +1,7 @@
 .welding-cobot__section {
-   --welding-ink: #17211f;
+   --welding-ink: #161616;
    --welding-muted: #59645f;
-   --welding-accent: #d65b35;
+   --welding-accent: #00000000;
    padding: clamp(56px, 8vw, 112px) 0;
    overflow: hidden;
    color: var(--welding-ink);
@@ -291,9 +291,9 @@
 }
 
 .welding-cobot__section__why-automate {
-   --why-ink: #17211f;
+   --why-ink: #161616;
    --why-muted: #56625d;
-   --why-accent: #d65b35;
+   --why-accent: #000000;
    position: relative;
    isolation: isolate;
    overflow: hidden;
@@ -364,8 +364,8 @@
    position: relative;
    min-width: 0;
    padding: 30px 26px 28px !important;
-   border: 1px solid rgba(23, 33, 31, 0.1);
-   border-top: 3px solid var(--why-accent);
+   
+   border-top: 3px solid #131313fc;
    background: rgba(255, 255, 255, 0.94);
    box-shadow: 0 16px 38px rgba(23, 33, 31, 0.07);
    transition: transform 180ms ease, box-shadow 180ms ease;
@@ -456,9 +456,9 @@
 }
 
 .welding-cobot__section__jobs {
-   --jobs-ink: #17211f;
+   --jobs-ink: #161616;
    --jobs-muted: #c4cbc6;
-   --jobs-accent: #d65b35;
+   --jobs-accent: #000000;
    position: relative;
    isolation: isolate;
    overflow: hidden;
@@ -583,7 +583,7 @@
 }
 
 .welding-cobot__jobs__content li:hover {
-   border-color: rgba(214, 91, 53, 0.7);
+   border-color: rgb(129 129 129 / 70%);
    background: rgba(255, 255, 255, 0.08);
    transform: translateY(-2px);
 }
@@ -641,9 +641,9 @@
 }
 
 .welding-cobot__section__table__structure {
-   --compare-ink: #17211f;
+   --compare-ink: #161616;
    --compare-muted: #59645f;
-   --compare-accent: #d65b35;
+   --compare-accent: #000000;
    position: relative;
    isolation: isolate;
    overflow: hidden;
@@ -704,7 +704,7 @@
 
 .welding-cobot__section__table thead {
    color: #fff;
-   background: #202b28;
+   background: #3e3e3e;
 }
 
 .welding-cobot__section__table thead th {
@@ -753,7 +753,7 @@
 
 .welding-cobot__section__table tbody td:first-of-type {
    color: var(--compare-ink);
-   background: #fff7f3;
+   background: #f5f5f5;
 }
 
 .welding-cobot__section__table tbody tr:last-child th,
@@ -767,7 +767,7 @@
 }
 
 .welding-cobot__section__table tbody tr:hover td:first-of-type {
-   background-color: #ffede4;
+   background-color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -865,9 +865,9 @@
 }
 
 .welding-system__workflow {
-   --workflow-ink: #17211f;
+   --workflow-ink: #161616;
    --workflow-muted: #59645f;
-   --workflow-accent: #d65b35;
+   --workflow-accent: #000000;
    position: relative;
    isolation: isolate;
    overflow: hidden;
@@ -1033,8 +1033,8 @@
    width: 30px;
    height: 30px;
    place-items: center;
-   border: 1px solid rgba(214, 91, 53, 0.65);
-   color: #ff9a76;
+    border: 1px solid rgb(248 248 248 / 39%);
+    color: #d5d5d5;
    content: counter(workflow-step, decimal-leading-zero);
    font-family: "Georama", sans-serif;
    font-size: 11px;
@@ -1140,9 +1140,9 @@
 }
 
 .welding-cobot__industries {
-   --industries-ink: #17211f;
+   --industries-ink: #161616;
    --industries-muted: #59645f;
-   --industries-accent: #d65b35;
+   --industries-accent: #000000;
    position: relative;
    isolation: isolate;
    overflow: hidden;
@@ -1319,7 +1319,7 @@
    width: 30px;
    height: 30px;
    place-items: center;
-   border: 1px solid rgba(214, 91, 53, 0.65);
+   border: 1px solid rgb(65 65 65 / 65%);
    color: var(--industries-accent);
    content: counter(industry, decimal-leading-zero);
    font-family: "Georama", sans-serif;
@@ -1398,9 +1398,9 @@
 }
 
 .welding-cobot__faq {
-   --faq-ink: #17211f;
+   --faq-ink: #161616;
    --faq-muted: #59645f;
-   --faq-accent: #d65b35;
+   --faq-accent: #000000;
    position: relative;
    isolation: isolate;
    overflow: hidden;
@@ -1793,9 +1793,9 @@
 
 .welding-models__cta:hover {
    transform: translateY(-2px);
-   border-color: #056b49;
-   background: #056b49;
-   color: #fff;
+      border-color: #000000;
+    background: #ffffff;
+    color: #000000;
 }
 
 .welding-models__cta:hover span {
