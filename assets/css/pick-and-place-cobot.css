@@ -371,41 +371,6 @@
    line-height: 1.5;
 }
 
-.pp-check-list {
-   display: grid;
-   gap: 17px;
-   margin: 0;
-   padding: 0;
-   list-style: none;
-}
-
-.pp-check-list li {
-   position: relative;
-   padding: 0 0 17px 30px;
-   border-bottom: 1px solid var(--pp-line);
-   font-size: 0.94rem;
-   line-height: 1.65;
-}
-
-.pp-check-list li:last-child {
-   border-bottom: 0;
-}
-
-.pp-check-list li::before {
-   position: absolute;
-   top: 0.12em;
-   left: 0;
-   display: grid;
-   width: 19px;
-   height: 19px;
-   place-items: center;
-   border: 1px solid var(--pp-ink);
-   border-radius: 50%;
-   content: "✓";
-   font-size: 0.68rem;
-   font-weight: 700;
-}
-
 .pp-comparison {
    background: rgba(0, 0, 0, 0.035);
 }
@@ -510,8 +475,112 @@
    background: var(--pp-paper);
 }
 
-.pp-solution .pp-check-list li {
-   padding-top: 3px;
+.pp-solution .pp-content-grid {
+   align-items: center;
+}
+
+.pp-solution-list {
+   --pp-solution-pad: 20px;
+   --pp-solution-icon: 56px;
+   position: relative;
+   display: grid;
+   gap: 14px;
+   margin: 0;
+   padding: 0;
+   list-style: none;
+}
+
+/* Rail behind the cards, visible only in the gaps so the components read as one linked system. */
+.pp-solution-list::before {
+   position: absolute;
+   top: var(--pp-solution-pad);
+   bottom: var(--pp-solution-pad);
+   left: calc(var(--pp-solution-pad) + var(--pp-solution-icon) / 2);
+   width: 1px;
+   background: var(--pp-ink);
+   content: "";
+}
+
+.pp-solution-item {
+   position: relative;
+   display: grid;
+   grid-template-columns: auto minmax(0, 1fr) auto;
+   align-items: center;
+   gap: clamp(16px, 1.6vw, 24px);
+   padding: var(--pp-solution-pad) 28px var(--pp-solution-pad) var(--pp-solution-pad);
+   border: 1px solid var(--pp-line);
+   border-radius: 10px;
+   background: #fff;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 18px 40px -30px rgba(0, 0, 0, 0.35);
+   transition: transform 260ms ease, background 260ms ease, border-color 260ms ease, box-shadow 260ms ease;
+}
+
+.pp-solution-item__icon {
+   display: grid;
+   width: var(--pp-solution-icon);
+   height: var(--pp-solution-icon);
+   place-items: center;
+   border-radius: 8px;
+   background: var(--pp-ink);
+   color: var(--pp-paper);
+   transition: background 260ms ease, color 260ms ease;
+}
+
+.pp-solution-item__icon svg {
+   width: 28px;
+   height: 28px;
+   fill: none;
+   stroke: currentColor;
+   stroke-linecap: round;
+   stroke-linejoin: round;
+   stroke-width: 1.5;
+}
+
+.pp-solution-item__icon .pp-solution-item__dot {
+   fill: currentColor;
+   stroke: none;
+}
+
+.pp-solution-item__text {
+   font-size: clamp(1rem, 1.15vw, 1.14rem);
+   font-weight: 550;
+   letter-spacing: -0.01em;
+   line-height: 1.45;
+   transition: color 260ms ease;
+}
+
+.pp-solution-item__number {
+   color: rgba(0, 0, 0, 0.04);
+   font-size: clamp(2rem, 2.7vw, 2.7rem);
+   font-weight: 700;
+   letter-spacing: -0.05em;
+   line-height: 1;
+   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.22);
+   transition: color 260ms ease, -webkit-text-stroke-color 260ms ease;
+   user-select: none;
+}
+
+@media (hover: hover) {
+   .pp-solution-item:hover {
+      transform: translateY(-4px);
+      border-color: var(--pp-ink);
+      background: var(--pp-ink);
+      box-shadow: 0 26px 46px -26px rgba(0, 0, 0, 0.6);
+   }
+
+   .pp-solution-item:hover .pp-solution-item__icon {
+      background: var(--pp-paper);
+      color: var(--pp-ink);
+   }
+
+   .pp-solution-item:hover .pp-solution-item__text {
+      color: var(--pp-paper);
+   }
+
+   .pp-solution-item:hover .pp-solution-item__number {
+      color: rgba(250, 249, 249, 0.08);
+      -webkit-text-stroke-color: rgba(250, 249, 249, 0.55);
+   }
 }
 
 .pp-industries {
@@ -971,6 +1040,25 @@
 
    .pp-steps {
       grid-template-columns: 1fr;
+   }
+
+   .pp-solution-list {
+      --pp-solution-pad: 14px;
+      --pp-solution-icon: 48px;
+      gap: 12px;
+   }
+
+   .pp-solution-item {
+      gap: 14px;
+      padding-right: 18px;
+   }
+
+   .pp-solution-item__text {
+      font-size: 0.96rem;
+   }
+
+   .pp-solution-item__number {
+      font-size: 1.6rem;
    }
 
    .pp-step,
