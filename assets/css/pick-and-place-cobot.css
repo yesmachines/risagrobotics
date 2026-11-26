@@ -376,7 +376,24 @@
 }
 
 .pp-comparison .pp-section-head {
-   max-width: 930px;
+   display: grid;
+   grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+   align-items: center;
+   gap: clamp(24px, 5vw, 72px);
+   max-width: none;
+   text-align: left;
+}
+
+.pp-comparison .pp-section-head h2 {
+   margin: 0;
+   text-wrap: balance;
+}
+
+.pp-comparison .pp-section-head > p {
+   max-width: 490px;
+   margin: 0;
+   padding: 4px 0 4px 20px;
+   border-left: 3px solid var(--pp-ink);
 }
 
 .pp-table-wrap {
@@ -1134,6 +1151,15 @@
    .pp-section-head {
       margin-bottom: 36px;
       text-align: left;
+   }
+
+   .pp-comparison .pp-section-head {
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+   }
+
+   .pp-comparison .pp-section-head > p {
+      max-width: 560px;
    }
    .pp-step p {
       text-align: left;
