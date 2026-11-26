@@ -493,7 +493,7 @@
 
 .palletizing-industries {
    padding: 64px 0;
-   background: #ccc;
+   background: #fff;
 }
 
 .palletizing-industries__grid {
@@ -520,19 +520,20 @@
 
 .palletizing-industry-list li {
    display: flex;
-   min-height: 72px;
-   align-items: center;
-   padding: 15px 18px;
-   border: 1px solid var(--pallet-line);
-   border-radius: 5px;
-   color: var(--pallet-ink);
-   font-size: 0.91rem;
-   font-weight: 650;
-   line-height: 1.4;
+    min-height: 72px;
+    align-items: center;
+    padding: 15px 18px;
+    border: 1px solid var(--pallet-line);
+    border-radius: 5px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 650;
+    line-height: 1.4;
+    background: #fcfcfc;
 }
 
 .palletizing-selection {
-   background: var(--pallet-soft);
+   background: #f2f2f2;
 }
 
 .palletizing-card-grid--five {
@@ -562,7 +563,7 @@
 }
 
 .palletizing-factor p {
-   font-size: 0.9rem;
+   font-size: 16px;
 }
 
 .palletizing-assessment {
@@ -580,7 +581,7 @@
 .palletizing-assessment h2,
 .palletizing-assessment p,
 .palletizing-assessment .palletizing-kicker {
-   color: #ccc;
+   color: #fff;
 }
 
 .palletizing-assessment h2 {
@@ -605,21 +606,21 @@
    padding: 9px 13px;
    border: 1px solid #ccc;
    border-radius: 4px;
-   color: #ccc;
+   color: #fafafa;
    font-size: 0.83rem;
 }
 
 .palletizing-button--light {
    flex-shrink: 0;
    border-color: #ccc;
-   background: #ccc;
+   background: #fff;
    color: var(--pallet-ink);
 }
 
 .palletizing-button--light:hover {
-   border-color: #000;
-   background: #000;
-   color: #ccc;
+    background: #000;
+    box-shadow: -1px 0px 6px 0px #ccc;
+    color: #fff;
 }
 
 .palletizing-faq {
